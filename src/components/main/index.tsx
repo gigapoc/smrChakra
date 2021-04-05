@@ -11,7 +11,7 @@ export const Main: React.FC = () => {
       <p style={{ fontSize: theme.fontSizes["lg"] }}>
         The frontend boilerplate with superpowers!
       </p>
-      <Button colorScheme="blue" variant="solid" size="md">
+      <Button colorScheme="orange" variant="solid" size="md">
         <a href="https://pankod.github.io/superplate/" target="_blank">
           Docs
         </a>

@@ -232,6 +232,14 @@
   dependencies:
     "@chakra-ui/utils" "1.5.0"
 
+"@chakra-ui/icons@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.0.8.tgz#151694d73bfa7aaedbaaff633dae8cb1d83cd2ac"
+  integrity sha512-cguOYbIJG5krhnm0LGKtOariJYv36z3lFkyJtRuWCwJMdl3ruxZVynsAcqnu4a5WJUINDMQzj36+k7u72gG0qA==
+  dependencies:
+    "@chakra-ui/icon" "1.1.4"
+    "@types/react" "^17.0.0"
+
 "@chakra-ui/image@1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@chakra-ui/image/-/image-1.0.10.tgz#ace03938d28690bdf805d89aac06535f2b5fb30b"
@@ -710,6 +718,11 @@
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
+
+"@fontsource/quicksand@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/quicksand/-/quicksand-4.2.2.tgz#50811e16611266dcee8a8e0767e770b23e68ed79"
+  integrity sha512-YaEG3b5eST4eyj2E28tkJJwnUSMP/zvxI7K/Nx9mkk5aqgDp2WJFzcQ84MFnFVwgy+mZodpzPaPJ6KGtv0q/lg==
 
 "@hapi/accept@5.0.1":
   version "5.0.1"

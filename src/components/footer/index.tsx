@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
             />
           </a>
           <a
-            href="https://www.youtube.com/channel/UCBGOeQkv1XW3ptryLWlQbAQ"
+            href="https://www.youtube.com/channel/UC3qX1bKa-A5qpBAVtMZk2Dw"
             target="_blank"
             style={iconStyle}
           >
@@ -54,13 +54,13 @@ export const Footer: React.FC = () => {
             />
           </a>
           <a
-            href="https://www.linkedin.com/company/pankod-yazilim-ve-danismanlik/"
+            href="https://discord.gg/pcrYmAr"
             target="_blank"
             style={iconStyle}
           >
             <Image
-              src="/icons/linkedin-icon.svg"
-              alt="linkedin"
+              src="/icons/discord-icon.svg"
+              alt="discord"
               width="28"
               height="32"
             />
