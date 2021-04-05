@@ -42,12 +42,13 @@ const PopoverMenu = ({menuName, links}: PopoverMenuProps) => {
             <PopoverContent bg="main.200"
                     border={"1px solid white"}
                     rounded={'xl'}
-                    color="main.100">
+                    color="main.100"
+                    transition=".1s">
                     <PopoverArrow/>
                     <Table variant="unstyled">
                         <Tbody rounded="xl">
                             {links.map((l,i) => 
-                                <Tr cursor="pointer" _hover={{color:"orange.100"}} transition=".2s" key={i} >
+                                <Tr cursor="pointer" _hover={{color:"orange.100"}} transition=".5s" key={i} >
                                     <Td rounded="xl" onClick={() => window.location.href=l.href} key={i+"_"+i}>
                                         <Center>{l.label}</Center>
                                     </Td>
@@ -104,7 +105,7 @@ export const Menu: React.FC<any> = ({pagesActivites}: MenuProps) => {
         },
     ]
 
-    return <Center color="main.200" h="100px">
+    return <Center color="main.200" h="100%">
         <Stack direction="row" spacing={20}>
 
             <PopoverMenu menuName="ACTIVITÉS" links={linksActi}/>

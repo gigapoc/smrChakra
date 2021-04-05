@@ -1,5 +1,5 @@
 import React from "react";
-import { Center, Flex, Box, Spacer } from "@chakra-ui/react";
+import { Center, Flex, Box, Spacer, Link } from "@chakra-ui/react";
 
 import { Logo } from "@components";
 import { SocialNetworks } from "@components/socialNetworks";
@@ -11,17 +11,20 @@ interface HeaderProps {
     url: string;
     order: number;
   }[];
+  isScrolled: boolean;
 }
 
-export const Header: React.FC<any> = ({pages}: HeaderProps) => {
-  return <Box bg="main.100">
-    <Flex height="100px">
+export const Header: React.FC<any> = ({pages, isScrolled}: HeaderProps) => {
+  return <Box bg="main.100" position="fixed" width="100vw" h="100px" transition=".2s">
+    <Flex  h="100px" >
       <Spacer flex={0.5}/>
       <Box flex="5">
         <SocialNetworks/>
       </Box>
       <Center flex="2">
-        <Logo />
+        <Link href="/" _focus={{border: "none"}}>
+          <Logo />
+        </Link>
       </Center>
       <Box flex="5">
         <Menu pagesActivites={pages}/>

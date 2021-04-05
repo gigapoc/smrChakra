@@ -17,7 +17,7 @@ export default function Page({page}: PageProps) {
       image: ({src, alt}) => {
         return <img src={src} alt={alt} width={"50%"} height={"100%"} className={"image"} />
       },
-      h1: ({value}) => {console.log('vl', value); return <h1 className={"h1"}>{value}</h1>}
+      h1: ({value}) => <h1 className={"h1"}>{value}</h1>
     }
 
     return <div id="content" className={"content"}>

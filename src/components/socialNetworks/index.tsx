@@ -12,7 +12,7 @@ export const SocialNetworks: React.FC = () => {
     };
 
     return (
-        <Center bg="main.100" h="110px">
+        <Center bg="main.100" h="100%">
             <Flex >
                 <a href="https://www.instagram.com/senartmultirotorracing/" target="_blank" style={iconStyle}>
                     <Image

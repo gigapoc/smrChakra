@@ -1,5 +1,5 @@
-import React from "react";
-import { ChakraProvider, Flex } from "@chakra-ui/react";
+import React, {useState} from "react";
+import { ChakraProvider, Flex, Box } from "@chakra-ui/react";
 import theme from "@definitions/chakra/theme";
 import "@styles/global.scss";
 import "@styles/page.scss";
@@ -21,12 +21,28 @@ interface AppProps {
   }[];
 }
 
+
+
 function MyApp({ Component, pageProps, pages }: AppProps): JSX.Element {
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  window.onscroll = () => {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      setIsScrolled(true)
+    } else {
+      setIsScrolled(false)
+    }
+  }
+
   return (
     <ChakraProvider theme={theme}>
       <Flex direction="column" minH="100vh">
-        <Header pages={pages}/>
-        <Component {...pageProps} />
+        
+        <Box position="relative" top="100px">
+          <Component {...pageProps} />
+        </Box>
+        <Header pages={pages} isScrolled={isScrolled} />
       </Flex>
     </ChakraProvider>
   );
