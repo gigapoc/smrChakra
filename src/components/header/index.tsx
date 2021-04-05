@@ -11,10 +11,9 @@ interface HeaderProps {
     url: string;
     order: number;
   }[];
-  isScrolled: boolean;
 }
 
-export const Header: React.FC<any> = ({pages, isScrolled}: HeaderProps) => {
+export const Header: React.FC<any> = ({pages}: HeaderProps) => {
   return <Box bg="main.100" position="fixed" width="100vw" h="100px" transition=".2s">
     <Flex  h="100px" >
       <Spacer flex={0.5}/>

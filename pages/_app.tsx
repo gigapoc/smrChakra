@@ -25,16 +25,6 @@ interface AppProps {
 
 function MyApp({ Component, pageProps, pages }: AppProps): JSX.Element {
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  window.onscroll = () => {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      setIsScrolled(true)
-    } else {
-      setIsScrolled(false)
-    }
-  }
-
   return (
     <ChakraProvider theme={theme}>
       <Flex direction="column" minH="100vh">
@@ -42,7 +32,7 @@ function MyApp({ Component, pageProps, pages }: AppProps): JSX.Element {
         <Box position="relative" top="100px">
           <Component {...pageProps} />
         </Box>
-        <Header pages={pages} isScrolled={isScrolled} />
+        <Header pages={pages} />
       </Flex>
     </ChakraProvider>
   );
