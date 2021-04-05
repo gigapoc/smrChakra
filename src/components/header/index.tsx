@@ -4,9 +4,16 @@ import { Center, Flex, Box, Spacer } from "@chakra-ui/react";
 import { Logo } from "@components";
 import { SocialNetworks } from "@components/socialNetworks";
 import {Menu} from "@components/menu";
-import { SP } from "next/dist/next-server/lib/utils";
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  pages: {
+    titre_menu: string;
+    url: string;
+    order: number;
+  }[];
+}
+
+export const Header: React.FC<any> = ({pages}: HeaderProps) => {
   return <Box bg="main.100">
     <Flex height="100px">
       <Spacer flex={0.5}/>
@@ -17,7 +24,7 @@ export const Header: React.FC = () => {
         <Logo />
       </Center>
       <Box flex="5">
-        <Menu />
+        <Menu pagesActivites={pages}/>
       </Box>
       <Spacer flex={0.5}/>
     </Flex>

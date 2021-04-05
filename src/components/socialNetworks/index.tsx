@@ -12,8 +12,8 @@ export const SocialNetworks: React.FC = () => {
     };
 
     return (
-        <Center bg="main.100">
-            <Flex mt={5}>
+        <Center bg="main.100" h="110px">
+            <Flex >
                 <a href="https://www.instagram.com/senartmultirotorracing/" target="_blank" style={iconStyle}>
                     <Image
                     src="/icons/instagram-icon.svg"
