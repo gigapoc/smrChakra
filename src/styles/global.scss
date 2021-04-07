@@ -6,3 +6,20 @@ body {
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+
+
+
+@keyframes bounce {
+  from {
+    top: -3px;
+  }
+  to {
+    top: 3px;
+  }
+}
+
+.bounce {
+  position: relative;
+  animation: bounce .6s ease-in 0s infinite alternate;
+}

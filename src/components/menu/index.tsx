@@ -44,7 +44,7 @@ const PopoverMenu = ({menuName, links}: PopoverMenuProps) => {
                     rounded={'xl'}
                     color="main.100"
                     transition=".1s">
-                    <PopoverArrow/>
+                    {/* <PopoverArrow/> */}
                     <Table variant="unstyled">
                         <Tbody rounded="xl">
                             {links.map((l,i) => 
