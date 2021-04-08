@@ -1,4 +1,4 @@
-import {  TriangleDownIcon } from "@chakra-ui/icons";
+import {  ChevronDownIcon } from "@chakra-ui/icons";
 import { Center, Flex, Text } from "@chakra-ui/layout";
 import React from "react";
 
@@ -12,7 +12,7 @@ export const DiscoverClub: React.FC<Props> = ({h}) => {
                 <Text textAlign="center" color="orange.100">Découvrir le club</Text>
             </Center>
             <Center>
-                <TriangleDownIcon color="orange.100" className="bounce"/>
+                <ChevronDownIcon color="orange.100" className="bounce"/>
             </Center>
             
         </Flex>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Spacer, Flex } from "@chakra-ui/react";
 
-import { Header, Main, Cards, Footer } from "@components";
+import { TextePresentation } from "@components";
 import { EmbedVideo } from "@components/embedVideo";
 import { DiscoverClub } from "@components/discoverClub";
 
@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     <Flex direction="column" minH="calc(100%-100px)">
       <EmbedVideo height="80vh"/>
       <DiscoverClub h="10vh" />
-      <Cards />
+      <TextePresentation h="40vh"/>
       <Spacer />
     </Flex>
   );
