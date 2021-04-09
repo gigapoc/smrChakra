@@ -20,7 +20,7 @@ export const Header: React.FC<any> = ({pages}: HeaderProps) => {
       <Box flex="5">
         <SocialNetworks/>
       </Box>
-      <Center flex="2">
+      <Center flex="2" marginTop="50px">
         <Link href="/" _focus={{border: "none"}}>
           <Logo />
         </Link>
@@ -32,9 +32,9 @@ export const Header: React.FC<any> = ({pages}: HeaderProps) => {
     </Flex>
     <Flex>
       <Spacer flex={0.5}/>
-      <Box flex={5} height="1px" bg="orange.100"/>
+      <Box flex={5} height="2px" bg="orange.100"/>
       <Spacer flex={2}/>
-      <Box flex={5} height="1px" bg="orange.100" />
+      <Box flex={5} height="2px" bg="orange.100" />
       <Spacer flex={0.5}/>
     </Flex>
   </Box>;
