@@ -23,3 +23,12 @@ body {
   position: relative;
   animation: bounce .6s ease-in 0s infinite alternate;
 }
+
+
+.hoverIcon {
+  color: #fff;
+}
+
+.hoverIcon:hover {
+  color: orange;
+}

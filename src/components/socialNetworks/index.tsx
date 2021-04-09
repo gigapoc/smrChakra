@@ -1,4 +1,4 @@
-import { Center, Flex } from "@chakra-ui/react";
+import { Center, Flex, Link } from "@chakra-ui/react";
 import React from "react";
 import Image from "next/image";
 
@@ -8,20 +8,21 @@ export const SocialNetworks: React.FC = () => {
         fontSize: 22,
         color: "#fff",
         marginRight: "1rem",
-        marginLeft: "1rem",
+        marginLeft: "1rem"
     };
 
     return (
         <Center bg="main.100" h="100%">
             <Flex >
-                <a href="https://www.instagram.com/senartmultirotorracing/" target="_blank" style={iconStyle}>
+                <Link href="https://www.instagram.com/senartmultirotorracing/" target="_blank" style={iconStyle} >
                     <Image
-                    src="/icons/instagram-icon.svg"
-                    alt="instagram"
-                    width="28"
-                    height="29"
+                        src="/icons/instagram-icon.svg"
+                        alt="instagram"
+                        width="28"
+                        height="29"
+                        className={"hoverIcon"}
                     />
-                </a>
+                </Link>
                 <a
                     href="http://www.facebook.com/senartmultirotorracing"
                     target="_blank"

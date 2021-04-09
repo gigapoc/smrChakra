@@ -13,10 +13,10 @@ export const TextePresentation: React.FC<Props> = ({h}) => {
         <Text>
             Le SMR a été créé en février 2016 avec un objectif simple : <Text color='orange.100' display="inline" fontWeight="bold">promouvoir le pilotage en immersion de multirotors dédiés à la course (FPV Racing)</Text>.
         </Text>
-        <Text>
+        <Text color="#fff">
             Cette promotion regroupe principalement trois aspects :
         </Text>
-        <List px='40' spacing={5}>
+        <List px='40' spacing={5} marginTop="10">
             <ListItem>
                 <ListIcon as={CheckCircleIcon} color="orange.100" />
                 Accueillir les pratiquants quel que soit leur niveau, afin de créer une communauté de pilotes ayant le souhait d'échanger leurs expériences tant sur le pilotage que sur le matériel
