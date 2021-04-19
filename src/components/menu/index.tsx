@@ -109,7 +109,7 @@ export const Menu: React.FC<any> = ({pagesActivites}: MenuProps) => {
 
             <PopoverMenu menuName="ACTIVITÉS" links={linksActi}/>
             <PopoverMenu menuName= "CLUB" links={linksClub}/>
-            <MenuLink href={'#'} bold={true}>BLOG</MenuLink>
+            <MenuLink href={'/blog'} bold={true}>BLOG</MenuLink>
 
         </Stack>
     </Center>
