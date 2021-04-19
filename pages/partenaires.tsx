@@ -1,5 +1,5 @@
 import { Image } from "@chakra-ui/image"
-import { Box, Grid, Center, Link } from "@chakra-ui/layout"
+import { Box, Grid, Center, Link, Text } from "@chakra-ui/layout"
 
 interface Props {
     
@@ -7,56 +7,57 @@ interface Props {
 
 const Partenaires: React.FC<Props> = () => {
     return <Box bg="main.100" minH="calc(100vh - 100px)">
-        <Center minH="100%">
+        <Center py="7%" flexDirection="column">
+            <Text color="main.200" pb="10">Merci à tous nos partenaires</Text>
             <Grid templateColumns="repeat(4, 1fr)" 
-                    gap={5}
-                    py="10"
+                    gap={20}
+                    h="70%"
                     >
                 <Center>
                     <Link href="https://www.grandparissud.fr/">
-                        <Image src="/images/gps.png" w="100%"/>
+                        <Image src="/images/gps.png" w="200px"/>
                     </Link>
                 </Center>
 
                 <Center>
                     <Link href="https://www.coeuressonne.fr/">
-                        <Image src="/images/logo_coeuressone.png"/>
+                        <Image src="/images/logo_coeuressone.png" w="200px"/>
                     </Link>
                 </Center>
 
                 <Center>
                     <Link href="https://dronesparisregion.com/">
-                        <Image src="/images/logo-cluster-drones.png"/>
+                        <Image src="/images/logo-cluster-drones.png" w="200px"/>
                     </Link>
                 </Center>
 
                 <Center>
                     <Link href="https://www.bretigny91.fr/">
-                        <Image src="/images/LOGO-BRETIGNY.png"/>
+                        <Image src="/images/LOGO-BRETIGNY.png" w="200px"/>
                     </Link>
                 </Center>
 
                 <Center>
                     <Link href="https://www.corbeil-essonnes.fr/">
-                        <Image src="/images/Logo_Corbeil-Essonnes.png"/>
+                        <Image src="/images/Logo_Corbeil-Essonnes.png" w="200px"/>
                     </Link>
                 </Center>
 
                 <Center>
                     <Link href="https://www.essonne.fr/">
-                        <Image src="/images/Logo_Essonne.jpg"/>
+                        <Image src="/images/Logo_Essonne.jpg" w="200px"/>
                     </Link>
                 </Center>
 
                 <Center>
                     <Link href="https://www.ffam.asso.fr/">
-                        <Image src="/images/logoFFAM.png"/>
+                        <Image src="/images/logoFFAM.png" w="200px"/>
                     </Link>
                 </Center>
 
                 <Center>
                     <Link href="http://lamif.ffam.asso.fr/">
-                        <Image src="/images/logo-LAM-IF.png"/>
+                        <Image src="/images/logo-LAM-IF.png" w="200px"/>
                     </Link>
                 </Center>
             </Grid>
