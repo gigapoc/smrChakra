@@ -28,7 +28,6 @@ function MyApp({ Component, pageProps, pages }: AppProps): JSX.Element {
   return (
     <ChakraProvider theme={theme}>
       <Flex direction="column" minH="100vh">
-        
         <Box position="relative" top="100px">
           <Component {...pageProps} />
         </Box>

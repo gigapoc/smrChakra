@@ -42,8 +42,7 @@ const PopoverMenu = ({menuName, links}: PopoverMenuProps) => {
             <PopoverContent bg="main.200"
                     border={"1px solid white"}
                     rounded={'xl'}
-                    color="main.100"
-                    transition=".1s">
+                    color="main.100">
                     {/* <PopoverArrow/> */}
                     <Table variant="unstyled">
                         <Tbody rounded="xl">
@@ -100,7 +99,7 @@ export const Menu: React.FC<any> = ({pagesActivites}: MenuProps) => {
             label: "Accès aux terrains"
         },
         {
-            href: "#",
+            href: "/partenaires",
             label: "Nos partenaires"
         },
     ]

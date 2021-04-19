@@ -24,7 +24,7 @@ export const LieuxDeVols: React.FC<Props> = ({h}) => {
                 <Center flex="1"><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
                 <Center flex="5" >
                     <Image 
-                        src="/entreeClubSmr.png"
+                        src="/images/entreeClubSmr.png"
                         width="calc(50%)"
                         objectFit="cover"
                     />
@@ -33,13 +33,13 @@ export const LieuxDeVols: React.FC<Props> = ({h}) => {
             <Flex justify="space-around" height="30vh">
                 <Center flex="5" >
                     <Image 
-                        src="/terrainCorbeil.jpg"
+                        src="/images/terrainCorbeil.jpg"
                         width="calc(50%)"
                         objectFit="cover"
                 />
                 </Center>
                 <Center flex="1"><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
-                <Center flex="5"><Text color="#fff" >Terrain de Corbeil-Essonnes</Text></Center>
+                <Center flex="5"><Text color="#fff" >Stade Robinson, Corbeil-Essonnes</Text></Center>
                 
             </Flex>
         </VStack>
