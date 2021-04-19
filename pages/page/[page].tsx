@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next'
 import axios from 'axios';
+import { Center } from '@chakra-ui/layout';
 const ReactMarkdownWithHtml = require('react-markdown/with-html')
 const { connect } = require("../../src/services/connect");
 
@@ -15,15 +16,15 @@ interface PageProps {
 export default function Page({page}: PageProps) {
     const renderers = {
       image: ({src, alt}) => {
-        return <img src={src} alt={alt} width={"50%"} height={"100%"} className={"image"} />
+        return <Center><img src={src} alt={alt} width={"50%"} height={"100%"} className={"image"} /></Center>
       },
       h1: ({value}) => <h1 className={"h1"}>{value}</h1>
     }
 
-    return <div id="content" className={"content"}>
+    return <Center id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh">
       {/* <h1 className={styles.h1}>{page.titre_menu}</h1> */}
       <ReactMarkdownWithHtml children={page.contenu} renderers={renderers} allowDangerousHtml/>
-    </div>
+    </Center>
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
