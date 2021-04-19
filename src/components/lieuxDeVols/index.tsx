@@ -1,8 +1,7 @@
 import React from "react";
-import { Box, ListItem, Text, List, ListIcon, Center, Spacer, VStack, Flex } from '@chakra-ui/react';
+import { Box, ListItem, Text, List, ListIcon, Center, Spacer, VStack, Flex, Image } from '@chakra-ui/react';
 import { Title } from "@components/title";
 import { Separator } from "@components/separator";
-import Image from "next/image";
 
 interface Props {
     h: string;
@@ -11,22 +10,37 @@ interface Props {
 export const LieuxDeVols: React.FC<Props> = ({h}) => {
 
     return <Box bg="main.100" h={h}>
-        <Center>
+        <Center my="10">
             <Title w="15vw">Nos lieux de vol en Essonne</Title>
         </Center>
         
-        <Title w="6vw">En extérieur</Title>
-        <VStack align="stretch" spacing="10px">
-            <Flex justify="space-around">
-                <Center flex="5"><Text color="#fff" >Acienne base aérienne 217, Brétigny-sur-orge</Text></Center>
-                <Box flex="1" marginTop="10"><Separator w="9vw"/></Box>
-                <Center flex="5">
+        <Box my="10" mx="20">
+            <Title w="6vw" >En extérieur</Title>
+        </Box>
+        
+        <VStack align="stretch" spacing="70px">
+            <Flex justify="space-around" height="30vh">
+                <Center flex="5"><Text color="#fff" >Ancienne base aérienne 217, Brétigny-sur-orge</Text></Center>
+                <Center flex="1"><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
+                <Center flex="5" >
                     <Image 
                         src="/entreeClubSmr.png"
-                        width="100%"
-                        height="100%"
+                        width="calc(50%)"
+                        objectFit="cover"
                     />
                 </Center>
+            </Flex>
+            <Flex justify="space-around" height="30vh">
+                <Center flex="5" >
+                    <Image 
+                        src="/terrainCorbeil.jpg"
+                        width="calc(50%)"
+                        objectFit="cover"
+                />
+                </Center>
+                <Center flex="1"><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
+                <Center flex="5"><Text color="#fff" >Terrain de Corbeil-Essonnes</Text></Center>
+                
             </Flex>
         </VStack>
     </Box>
