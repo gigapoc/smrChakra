@@ -20,7 +20,7 @@ const overrides = {
   fonts: {
     heading: "Quicksand:700",
     body: "Quicksand"
-  }
+  } 
 };
 
 const theme = extendTheme(overrides);

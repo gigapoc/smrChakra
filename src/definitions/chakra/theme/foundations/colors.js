@@ -9,7 +9,8 @@ export default {
   },
   main: {
     100: "#1e1e1e",
-    200: "#fff"
+    200: "#fff",
+    300: "#F8AF37"
   },
   orange: {
     100: "#F8AF37"
