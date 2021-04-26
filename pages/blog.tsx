@@ -41,27 +41,36 @@ interface Props {
 
 const Blog: React.FC<Props> = ({articles}) => {
 
-    let [arts, setArts] = useState(articles);
+    let [arts, setArts] = useState(articles.sort((a, b) => {if (new Date(a.dateArticle).getTime() > new Date(b.dateArticle).getTime()) return -1; return 1}));
+    let [isArtsFiltered, setIsArtsFiltered] = useState(false)
     
     let callbackFilterMonth = (month: number) => {
-        setArts(articles.filter(a => new Date(a.dateArticle).getMonth() === month))
+        setArts(articles.filter(a => new Date(a.dateArticle).getMonth() === month).sort((a, b) => {if (new Date(a.dateArticle).getTime() > new Date(b.dateArticle).getTime()) return -1; return 1}))
+        setIsArtsFiltered(true);
+    }
+
+    let unfilterArts = () => {
+        setArts(articles.sort((a, b) => {if (new Date(a.dateArticle).getTime() > new Date(b.dateArticle).getTime()) return -1; return 1}));
+        setIsArtsFiltered(false);
     }
 
     return <Box bg="main.100" minH="calc(100vh - 100px)" h="calc(100vh - 100px)">
         <Container h="100%" maxW="container.xl">
             <Flex h="100%">
-            <Box flexGrow={8} border="1px solid blue">
+            <Box flexGrow={8}>
                 <Grid templateRows="repeat(3, 1fr)"
                         templateColumns="repeat(2, 1fr)"
                         h="100%"
-                        gap={6}>
+                        gap={6}
+                        p={6}
+                        py={20}>
                     {arts.map(a => (
                         <GridItem><BlogPreview article={a}/></GridItem>
                     ))}
                 </Grid>
             </Box>
             <Box flexGrow={2}>
-                <Archives dates={articles.map(a => a.dateArticle)} callbackFilterMonth={callbackFilterMonth}/>
+                <Archives dates={articles.map(a => a.dateArticle)} callbackFilterMonth={callbackFilterMonth} resetFilter={unfilterArts} isFiltered={isArtsFiltered} />
             </Box>
                 
             </Flex>

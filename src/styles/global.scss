@@ -32,3 +32,16 @@ body {
 .hoverIcon:hover {
   color: orange;
 }
+
+.aspectRatioContain {
+  img {
+    object-position: top !important;
+  }
+}
+
+.scaleOnHover {
+  transition: transform .2s;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
