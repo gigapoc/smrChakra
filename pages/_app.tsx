@@ -8,7 +8,7 @@ import "@fontsource/quicksand/600.css"
 import { Header } from "@components/header";
 import axios from "axios";
 const { connect } = require("../src/services/connect");
-
+import 'focus-visible/dist/focus-visible'
 
 interface AppProps {
   Component: React.ComponentClass;
