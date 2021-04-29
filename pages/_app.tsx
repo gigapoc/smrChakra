@@ -9,6 +9,7 @@ import { Header } from "@components/header";
 import axios from "axios";
 const { connect } = require("../src/services/connect");
 import 'focus-visible/dist/focus-visible'
+import Head from "next/head"
 
 interface AppProps {
   Component: React.ComponentClass;
@@ -24,8 +25,10 @@ interface AppProps {
 
 
 function MyApp({ Component, pageProps, pages }: AppProps): JSX.Element {
-
-  return (
+  return <>
+    <Head>
+      <title>{Component.name}</title>
+    </Head>
     <ChakraProvider theme={theme}>
       <Flex direction="column" minH="100vh">
         <Box position="relative" top="100px" bg="main.100">
@@ -34,7 +37,7 @@ function MyApp({ Component, pageProps, pages }: AppProps): JSX.Element {
         <Header pages={pages} />
       </Flex>
     </ChakraProvider>
-  );
+  </>;
 }
 
 MyApp.getInitialProps = async () => {
