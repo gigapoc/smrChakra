@@ -6,6 +6,10 @@ import { useState } from "react"
 import { ImUser } from "react-icons/im";
 import { IoMail } from "react-icons/io5";
 import {IoMdText} from 'react-icons/io'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import Router from 'next/router'
+import {Logo} from '@components/logo'
 
 interface Props {
 
@@ -44,6 +48,8 @@ const Contact: React.FC<Props> = ({}) => {
         return res.test(String(email).toLowerCase());
     }
 
+    const [displayPopup, setDisplayPopup] = useState(false);
+
     const handleValidate = async () => {
         if (!nom.length) setErrorNom(true);
         if (!validateEmail(mail)) setErrorMail(true);
@@ -68,7 +74,9 @@ const Contact: React.FC<Props> = ({}) => {
                 body: JSON.stringify(body),
             }
             
-            await fetch(process.env.NEXT_PUBLIC_URL_SERVER_MAIL, options)
+            // await fetch(process.env.NEXT_PUBLIC_URL_SERVER_MAIL, options)
+
+            setDisplayPopup(true);
         }
     }
 
@@ -95,6 +103,13 @@ const Contact: React.FC<Props> = ({}) => {
                 <Button variant="outline" color="main.200" borderColor="main.200" _hover={{color: 'main.100', bg:"main.300", 'borderColor': "main.300"}} onClick={handleValidate}>Envoyer</Button>
             </VStack>
         </Container>
+        <Popup open={displayPopup} closeOnDocumentClick onClose={() => window.location.href='/'}>
+            <VStack>
+                <Logo />
+                <Text py={10}> Merci pour votre message, nous vous répondrons au plus vite ! </Text>
+                <Button onClick={() => window.location.href='/'} marginBottom={20}>Retour à l'acceuil</Button>
+            </VStack>
+        </Popup>
     </Box>
 }
 
