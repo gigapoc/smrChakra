@@ -28,7 +28,7 @@ const BlogPreview: React.FC<Props> = ({article}) => {
                         alt={article.apercu.alternativeText}
                         objectFit="contain"
                         objectPosition="top"
-                        borderRadius='15px 15px 0 0'
+                        borderRadius='15px 15px 15px 15px'
                         />
             </AspectRatio>
             <Box h="80px" px='8' py="2">
