@@ -14,7 +14,7 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<any> = ({pages}: HeaderProps) => {
-  return <Box bg="main.100" position="fixed" width="100vw" h="100px" transition=".2s">
+  return <Box bg="main.100" position="fixed" width="100vw" h="100px" transition=".1s">
     <Flex  h="100px" >
       <Spacer flex={0.5}/>
       <Box flex="5">

@@ -83,7 +83,7 @@ export const Menu: React.FC<any> = ({pagesActivites}: MenuProps) => {
 
     const linksClub = [
         {
-            href: "#",
+            href: "/contact",
             label: "Nous contacter"
         },
         {
@@ -95,7 +95,7 @@ export const Menu: React.FC<any> = ({pagesActivites}: MenuProps) => {
             label: "Calendrier"
         },
         {
-            href: "#",
+            href: "/terrains",
             label: "Accès aux terrains"
         },
         {

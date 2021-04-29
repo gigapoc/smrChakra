@@ -57,3 +57,18 @@ body {
     color: #1e2226;
   }
 }
+
+
+.divEmbed1 {
+  max-width:100%;list-style:none; transition: none;overflow:hidden;height:345px;
+
+  #canvasfor-googlemap {
+    height:100%; width:100%;max-width:100%;
+
+    iframe {
+      height:100%;width:100%;border:0;
+      border:none;
+    }
+  }
+}
+

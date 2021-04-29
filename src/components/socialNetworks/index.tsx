@@ -1,6 +1,5 @@
-import { Center, Flex, Link } from "@chakra-ui/react";
+import { Center, Flex, Image, Link } from "@chakra-ui/react";
 import React from "react";
-import Image from "next/image";
 
 export const SocialNetworks: React.FC = () => {
 
@@ -18,8 +17,8 @@ export const SocialNetworks: React.FC = () => {
                     <Image
                         src="/icons/instagram-icon.svg"
                         alt="instagram"
-                        width="28"
-                        height="29"
+                        width="28px"
+                        height="29px"
                         className={"hoverIcon"}
                     />
                 </Link>
@@ -31,8 +30,8 @@ export const SocialNetworks: React.FC = () => {
                     <Image
                     src="/icons/facebook-icon.svg"
                     alt="facebook"
-                    width="15"
-                    height="28"
+                    width="15px"
+                    height="28px"
                     />
                 </a>
                 <a
@@ -43,8 +42,8 @@ export const SocialNetworks: React.FC = () => {
                     <Image
                     src="/icons/youtube-icon.svg"
                     alt="youtube"
-                    width="31"
-                    height="32"
+                    width="31px"
+                    height="32px"
                     />
                 </a>
                 <a
@@ -55,8 +54,8 @@ export const SocialNetworks: React.FC = () => {
                     <Image
                     src="/icons/discord-icon.svg"
                     alt="discord"
-                    width="35"
-                    height="35"
+                    width="35px"
+                    height="35px"
                     />
                 </a>
             </Flex>
