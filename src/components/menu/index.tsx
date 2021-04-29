@@ -87,11 +87,11 @@ export const Menu: React.FC<any> = ({pagesActivites}: MenuProps) => {
             label: "Nous contacter"
         },
         {
-            href: "#",
+            href: "/adhesion",
             label: "Adhésion en ligne"
         },
         {
-            href: "#",
+            href: "/calendrier",
             label: "Calendrier"
         },
         {

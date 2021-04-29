@@ -1,5 +1,5 @@
 import { Image } from "@chakra-ui/image"
-import { Box, Grid, Center, Link, Text } from "@chakra-ui/layout"
+import { Box, Grid, Center, Link, Text, Container } from "@chakra-ui/layout"
 
 interface Props {
     
@@ -7,9 +7,10 @@ interface Props {
 
 const Partenaires: React.FC<Props> = () => {
     return <Box bg="main.100" minH="calc(100vh - 100px)">
+        <Container maxW="container.xl">
         <Center py="7%" flexDirection="column">
             <Text color="main.200" pb="10">Merci à tous nos partenaires</Text>
-            <Grid templateColumns="repeat(4, 1fr)" 
+            <Grid templateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4,1fr)"]} 
                     gap={20}
                     h="70%"
                     >
@@ -62,6 +63,8 @@ const Partenaires: React.FC<Props> = () => {
                 </Center>
             </Grid>
         </Center>
+        </Container>
+        
     </Box>
 }
 
