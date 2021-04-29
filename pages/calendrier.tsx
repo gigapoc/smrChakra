@@ -3,8 +3,7 @@ import FullCalendar from '@fullcalendar/react'
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import frLocale from '@fullcalendar/core/locales/fr';
-import "@fullcalendar/common/main.css"
-import "@fullcalendar/daygrid/main.css"
+
 
 interface Props {
     

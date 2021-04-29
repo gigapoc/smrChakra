@@ -3,6 +3,7 @@ import { ChakraProvider, Flex, Box } from "@chakra-ui/react";
 import theme from "@definitions/chakra/theme";
 import "@styles/global.scss";
 import "@styles/page.scss";
+import "@styles/fullcalendar.scss";
 import "@fontsource/quicksand/400.css"
 import "@fontsource/quicksand/600.css"
 import { Header } from "@components/header";
