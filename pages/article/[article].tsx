@@ -3,8 +3,10 @@ import axios from 'axios';
 import { Box, Text, Container, Center } from '@chakra-ui/layout';
 import { Article } from 'pages/blog';
 import { Image } from '@chakra-ui/image';
+import { Button } from '@chakra-ui/button';
 const ReactMarkdownWithHtml = require('react-markdown/with-html')
 const { connect } = require("../../src/services/connect");
+import {ArrowBackIcon} from "@chakra-ui/icons"
 
 interface ArticleProps {
   article: Article;
@@ -19,6 +21,9 @@ export default function BlogArticle({article}: ArticleProps) {
     }
 
     return <Container maxW="container.xl">
+        <Box mt={5} position="relative" left="-10%">
+          <Button variant="ghost" color="main.200" fontWeight="medium" _hover={{color: "main.100", bg: "main.200"}} onClick={() => window.location.href="/blog"}><ArrowBackIcon /> Revenir à tous les articles</Button>
+        </Box>
         <Center><Text color="main.300" fontWeight="bold" pt="20" fontSize="2xl">{article.title}</Text></Center>
         <Box id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh">
             {/* <h1 className={styles.h1}>{Article.titre_menu}</h1> */}
@@ -38,7 +43,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         },
       })
       .then((value) => {
-        console.log('VALUE DATA', value.data)
         return value.data;
       })
       .catch((e) => {
