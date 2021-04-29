@@ -39,6 +39,8 @@ interface Props {
     articles: Article[];
 }
 
+const ARTICLES_PER_PAGE = 10;
+
 const Blog: React.FC<Props> = ({articles}) => {
 
     let [arts, setArts] = useState(articles.sort((a, b) => {if (new Date(a.dateArticle).getTime() > new Date(b.dateArticle).getTime()) return -1; return 1}));
@@ -54,28 +56,31 @@ const Blog: React.FC<Props> = ({articles}) => {
         setIsArtsFiltered(false);
     }
 
+    let nbRows = ARTICLES_PER_PAGE / 2;
+
     return <Box bg="main.100" minH="calc(100vh - 100px)" h="calc(100vh - 100px)">
         <Container h="100%" maxW="container.xl">
             <Flex h="100%">
-            <Box flexGrow={8}>
-                <Grid templateRows="repeat(3, 1fr)"
-                        templateColumns="repeat(2, 1fr)"
-                        h="100%"
-                        gap={6}
-                        p={6}
-                        py={20}>
-                    {arts.map(a => (
-                        <GridItem><BlogPreview article={a}/></GridItem>
-                    ))}
-                </Grid>
-            </Box>
-            <Box flexGrow={2}>
-                <Archives dates={articles.map(a => a.dateArticle)} callbackFilterMonth={callbackFilterMonth} resetFilter={unfilterArts} isFiltered={isArtsFiltered} />
-            </Box>
-                
+                <Box flexGrow={8}>
+                    <Grid templateRows={"repeat("+ nbRows +", 1fr)"}
+                            templateColumns="repeat(2, 1fr)"
+                            h="100%"
+                            gap={6}
+                            p={6}
+                            py={20}>
+                        {arts.map(a => (
+                            <GridItem><BlogPreview article={a}/></GridItem>
+                        ))}
+                    </Grid>
+                </Box>
+                <Box flexGrow={2}>
+                    <Archives dates={articles.map(a => a.dateArticle)} callbackFilterMonth={callbackFilterMonth} resetFilter={unfilterArts} isFiltered={isArtsFiltered} />
+                </Box>
             </Flex>
         </Container>
-        
+        <Container>
+            
+        </Container>
     </Box>
 
 }
