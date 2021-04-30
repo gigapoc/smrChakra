@@ -2,6 +2,7 @@ import { AspectRatio, Box, Link, Text } from "@chakra-ui/layout"
 import {Image} from "@chakra-ui/image"
 import { Article } from "pages/blog";
 import { Months } from "@components/blogArchives";
+import {FaRegEye} from "react-icons/fa"
 
 interface Props {
     article: Article;
@@ -33,7 +34,8 @@ const BlogPreview: React.FC<Props> = ({article}) => {
             </AspectRatio>
             <Box h="80px" px='8' py="2">
                 <Text color="main.100" h="50px" fontSize="lg" fontWeight="bold" maxW="80%" overflow="hidden">{article.title}</Text>
-                <Text color="main.100" h="20px" fontSize="md" w="150px" overflow="hidden" float='right' textAlign="right">{dateToDisplay}</Text>
+                <Text color="main.100" mt="2px" className="blogViews"><FaRegEye/> {article.views}</Text>
+                <Text color="main.100" h="20px" fontSize="md" w="150px" overflow="hidden" float='right' textAlign="right" opacity={.8}>{dateToDisplay}</Text>
             </Box>
         </Box>
     </Link>

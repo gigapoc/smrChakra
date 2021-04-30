@@ -88,3 +88,18 @@ body {
     }
   }
 }
+
+
+
+//BLOG VIEWS
+.blogViews {
+  display: flex;
+  width: 60px;
+  justify-content: space-around;
+  line-height: 16px;
+  position: relative;
+  top: 4px;
+  float: left;
+  opacity: .8;
+  height: 20px;
+}

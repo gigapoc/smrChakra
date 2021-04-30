@@ -33,6 +33,7 @@ export interface Article {
             small: ImageFormat;
         }
     }
+    views: number;
 }
 
 interface Props {
