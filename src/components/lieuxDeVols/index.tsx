@@ -11,26 +11,15 @@ export const LieuxDeVols: React.FC<Props> = ({h}) => {
 
     return <Box bg="main.100" h={h}>
         <Center my="10">
-            <Title w="15vw">Nos lieux de vol en Essonne</Title>
+            <Title w="20vw" fontSize="1.5em">Nos lieux de vol en Essonne</Title>
         </Center>
         
-        <Box my="10" mx="20">
+        {/* <Box my="10" mx="20">
             <Title w="6vw" >En extérieur</Title>
-        </Box>
+        </Box> */}
         
         <VStack align="stretch" spacing="70px">
-            <Flex justify="space-around" height="30vh">
-                <Center flex="5"><Text color="#fff" >Ancienne base aérienne 217, Brétigny-sur-orge</Text></Center>
-                <Center flex="1"><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
-                <Center flex="5" >
-                    <Image 
-                        src="/images/entreeClubSmr.png"
-                        width="calc(50%)"
-                        objectFit="cover"
-                    />
-                </Center>
-            </Flex>
-            <Flex justify="space-around" height="30vh">
+        <Flex justify="space-around" height="30vh">
                 <Center flex="5" >
                     <Image 
                         src="/images/terrainCorbeil.jpg"
@@ -42,6 +31,18 @@ export const LieuxDeVols: React.FC<Props> = ({h}) => {
                 <Center flex="5"><Text color="#fff" >Stade Robinson, Corbeil-Essonnes</Text></Center>
                 
             </Flex>
+            <Flex justify="space-around" height="30vh">
+                <Center flex="5"><Text color="#fff" >Ancienne base aérienne 217, Brétigny-sur-orge</Text></Center>
+                <Center flex="1"><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
+                <Center flex="5" >
+                    <Image 
+                        src="/images/entreeClubSmr.png"
+                        width="calc(50%)"
+                        objectFit="cover"
+                    />
+                </Center>
+            </Flex>
+            
         </VStack>
     </Box>
 }

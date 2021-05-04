@@ -20,39 +20,7 @@ const Terrains: React.FC<Props> = ({}) => {
                 </Text>
             </Center>
             <VStack spacing="90px" mb={40}>
-                <Box w="100%">
-                    <Center><Title w="50%" fontSize="2xl">Brétigny-sur-Orge</Title></Center>
-                    <Flex flexDirection="row" mx={10} mt={10}>
-                        <Box flexGrow={1} mr={10} my='auto' w="50%">
-                            <Text textAlign="right" >
-
-                                Base Aérienne 217
-                                <br/>
-                                91220 Brétigny-sur-orge
-                                <br/>
-                                <br/>
-                                Accès: D19, sortie Brétigny centre / IRBA
-                                <br/>
-                                <br/>
-                                48°35'29.1"N 2°19'42.7"E
-                                <br/>
-                                48.591428, 2.328534
-
-                            </Text>
-                        </Box>
-                        <Box flexGrow={1} w="50%">
-                            {/* <Image 
-                                src="/images/entreeClubSmr.png"
-                                w="450px"
-                            /> */}
-                            <div className="divEmbed1">
-                                <div id="canvasfor-googlemap">
-                                    <iframe src="https://www.google.com/maps/embed/v1/place?q=48.591428,+2.328534&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&zoom=13" />
-                                </div>
-                            </div>
-                        </Box>
-                    </Flex>
-                </Box>
+                
                 <Box w="100%">
                     <Center><Title w="50%" fontSize="2xl">Corbeil-Essonnes</Title></Center>
                     <Flex flexDirection="row" mx={10} mt={10}>
@@ -87,7 +55,39 @@ const Terrains: React.FC<Props> = ({}) => {
                     </Flex>
                 </Box>
 
+                <Box w="100%">
+                    <Center><Title w="60%" fontSize="2xl">Brétigny-sur-Orge (terrain secondaire)</Title></Center>
+                    <Flex flexDirection="row" mx={10} mt={10}>
+                        <Box flexGrow={1} mr={10} my='auto' w="50%">
+                            <Text textAlign="right" >
 
+                                Base Aérienne 217
+                                <br/>
+                                91220 Brétigny-sur-orge
+                                <br/>
+                                <br/>
+                                Accès: D19, sortie Brétigny centre / IRBA
+                                <br/>
+                                <br/>
+                                48°35'29.1"N 2°19'42.7"E
+                                <br/>
+                                48.591428, 2.328534
+
+                            </Text>
+                        </Box>
+                        <Box flexGrow={1} w="50%">
+                            {/* <Image 
+                                src="/images/entreeClubSmr.png"
+                                w="450px"
+                            /> */}
+                            <div className="divEmbed1">
+                                <div id="canvasfor-googlemap">
+                                    <iframe src="https://www.google.com/maps/embed/v1/place?q=48.591428,+2.328534&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&zoom=13" />
+                                </div>
+                            </div>
+                        </Box>
+                    </Flex>
+                </Box>
                 
             </VStack>
         </Container>

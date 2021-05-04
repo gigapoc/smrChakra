@@ -14,21 +14,16 @@ const Partenaires: React.FC<Props> = () => {
                     gap={20}
                     h="70%"
                     >
+                
+                <Center>
+                    <Link href="https://www.corbeil-essonnes.fr/">
+                        <Image src="/images/Logo_Corbeil-Essonnes.png" w="200px"/>
+                    </Link>
+                </Center>
+
                 <Center>
                     <Link href="https://www.grandparissud.fr/">
                         <Image src="/images/gps.png" w="200px"/>
-                    </Link>
-                </Center>
-
-                <Center>
-                    <Link href="https://www.coeuressonne.fr/">
-                        <Image src="/images/logo_coeuressone.png" w="200px"/>
-                    </Link>
-                </Center>
-
-                <Center>
-                    <Link href="https://dronesparisregion.com/">
-                        <Image src="/images/logo-cluster-drones.png" w="200px"/>
                     </Link>
                 </Center>
 
@@ -39,16 +34,30 @@ const Partenaires: React.FC<Props> = () => {
                 </Center>
 
                 <Center>
-                    <Link href="https://www.corbeil-essonnes.fr/">
-                        <Image src="/images/Logo_Corbeil-Essonnes.png" w="200px"/>
+                    <Link href="https://www.coeuressonne.fr/">
+                        <Image src="/images/logo_coeuressone.png" w="200px"/>
                     </Link>
                 </Center>
-
+                
                 <Center>
                     <Link href="https://www.essonne.fr/">
                         <Image src="/images/Logo_Essonne.jpg" w="200px"/>
                     </Link>
                 </Center>
+
+                
+
+                <Center>
+                    <Link href="https://dronesparisregion.com/">
+                        <Image src="/images/logo-cluster-drones.png" w="200px"/>
+                    </Link>
+                </Center>
+
+                
+
+                
+
+                
 
                 <Center>
                     <Link href="https://www.ffam.asso.fr/">
