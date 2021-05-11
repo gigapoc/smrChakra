@@ -82,21 +82,26 @@ export const Menu: React.FC<any> = ({pagesActivites}: MenuProps) => {
     }
 
     const linksClub = [
-        {
-            href: "/contact",
-            label: "Nous contacter"
-        },
+        
         {
             href: "/adhesion",
             label: "Adhésion en ligne"
+        },
+        {
+            href: "/terrains",
+            label: "Accès aux terrains"
+        },
+        {
+            href: '/chronologie',
+            label: "Chronologie du club"
         },
         {
             href: "/calendrier",
             label: "Calendrier"
         },
         {
-            href: "/terrains",
-            label: "Accès aux terrains"
+            href: "/contact",
+            label: "Nous contacter"
         },
         {
             href: "/partenaires",

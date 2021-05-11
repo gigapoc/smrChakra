@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next'
 import axios from 'axios';
-import { Center, Container } from '@chakra-ui/layout';
+import { Center, Box, Container } from '@chakra-ui/layout';
 const ReactMarkdownWithHtml = require('react-markdown/with-html')
 const { connect } = require("../../src/services/connect");
 
@@ -15,17 +15,14 @@ interface PageProps {
 
 export default function Page({page}: PageProps) {
     const renderers = {
-      image: ({src, alt}) => {
-        return <Center><img src={src} alt={alt} width={"50%"} height={"100%"} className={"image"} /></Center>
-      },
       h1: ({value}) => <h1 className={"h1"}>{value}</h1>
     }
 
     return <Container maxW="container.xl" bg="main.100">
-      <Center id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh">
+      <Box id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh">
         {/* <h1 className={styles.h1}>{page.titre_menu}</h1> */}
         <ReactMarkdownWithHtml children={page.contenu} renderers={renderers} allowDangerousHtml/>
-      </Center>
+      </Box>
     </Container>
 }
 
@@ -46,10 +43,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         console.log("E", e);
       });
 
-    const regex = /\!\[.*\]\((.*)\)/gm;
+    const regex = /src=\"(.*)\"/gm;
     let contenu: string = pages[0].contenu
     contenu = contenu.replace(regex, (a,b) => a.replace(b, process.env.SERVER_URL + b))
     pages[0].contenu = contenu;
+
+    console.log('contenu', contenu)
 
     return {
       props: {

@@ -74,7 +74,7 @@ const Contact: React.FC<Props> = ({}) => {
                 body: JSON.stringify(body),
             }
             
-            // await fetch(process.env.NEXT_PUBLIC_URL_SERVER_MAIL, options)
+            await fetch(process.env.NEXT_PUBLIC_URL_SERVER_MAIL, options)
 
             setDisplayPopup(true);
         }
