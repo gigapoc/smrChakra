@@ -58,6 +58,21 @@ export const SocialNetworks: React.FC = () => {
                     height="35px"
                     />
                 </a>
+
+
+                <a
+                    href="https://www.thingiverse.com/smracing/designs"
+                    target="_blank"
+                    style={iconStyle}
+                    
+                >
+                    <Image
+                    src="/icons/thingiverse.png"
+                    alt="thingiverse"
+                    width="35px"
+                    height="35px"
+                    />
+                </a>
             </Flex>
         </Center>
     )
