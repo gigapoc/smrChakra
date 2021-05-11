@@ -13,7 +13,7 @@ const BlogPreview: React.FC<Props> = ({article}) => {
     let dateArticle = new Date(article.dateArticle);
 
     let dateToDisplay = (dateArticle.getDate() < 10 ? "0":"") + dateArticle.getDate() + " " + Months[dateArticle.getMonth()] + ' ' + dateArticle.getFullYear()
-
+    console.log('ARTICLE', article.apercu)
     return <Link href={"/article/" + article.id} _hover={{textDecoration: "none"}}>
         <Box border="1px solid rgba(255,255,255,.2)" 
                     h="100%" 
@@ -25,7 +25,7 @@ const BlogPreview: React.FC<Props> = ({article}) => {
                     
                     >
             <AspectRatio maxW="100%" maxH="250px" ratio={16/9} className='aspectRatioContain'>
-                <Image src={process.env.NEXT_PUBLIC_URL_SERVER + article.apercu.formats.large.url} 
+                <Image src={process.env.NEXT_PUBLIC_URL_SERVER + article.apercu.url} 
                         alt={article.apercu.alternativeText}
                         objectFit="contain"
                         objectPosition="top"

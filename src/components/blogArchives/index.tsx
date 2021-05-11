@@ -35,7 +35,7 @@ const Archives: React.FC<any> = ({dates, callbackFilterMonth, resetFilter, isFil
         occurrences[datesFormatted[i]] = (occurrences[datesFormatted[i]] || 0) + 1;
     }
     
-    let getUnformatted = (date: string) => Months[date.split(' ')[0]]
+    let getUnformatted = (date: string) => Months[date.split(' ')[0]] + " " + date.split(" ")[1]
 
     return <Flex flexDirection="column" py="2em" h="100%">
         <Center flexGrow={1} display='flex' flexDirection="column">

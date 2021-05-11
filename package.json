@@ -10,6 +10,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^1.0.8",
     "@chakra-ui/react": "^1.1.4",
+    "@choc-ui/paginator": "^3.2.0",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "@fontsource/quicksand": "^4.2.2",

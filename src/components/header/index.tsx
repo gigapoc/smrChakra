@@ -25,7 +25,7 @@ export const Header: React.FC<any> = ({pages}: HeaderProps) => {
           <Logo />
         </Link>
       </Center>
-      <Box flex="5">
+      <Box flex="5" mt={5}>
         <Menu pagesActivites={pages}/>
       </Box>
       <Spacer flex={0.5}/>

@@ -11,7 +11,6 @@ export const EmbedVideo: React.FC<Props> = ({height}) => {
         <AspectRatio maxH={height} >
             <video controls autoPlay muted height={height} >
                 <source src="videoOut.webm" type="video/webm"/>
-                {/* <source src="videoIntro.mp4" type="video/mp4"/> */}
             </video>
             {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/qtZ9NxpUN2o?controls=0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> */}
         </AspectRatio>
