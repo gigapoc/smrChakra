@@ -25,10 +25,10 @@ export default function BlogArticle({article}: ArticleProps) {
           <Button variant="ghost" color="main.200" fontWeight="medium" _hover={{color: "main.100", bg: "main.200"}} onClick={() => window.location.href="/blog"}><ArrowBackIcon /> Revenir à tous les articles</Button>
         </Box>
         <Center><Text color="main.300" fontWeight="bold" pt="20" fontSize="2xl">{article.title}</Text></Center>
-        <Box id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh">
+        <Box id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh" >
             {/* <h1 className={styles.h1}>{Article.titre_menu}</h1> */}
-            <ReactMarkdownWithHtml children={article.texte} allowDangerousHtml/>
-            
+            {/* <ReactMarkdownWithHtml children={article.texte} allowDangerousHtml/> */}
+            <div dangerouslySetInnerHTML={{__html: article.texte}} className="ck-content" />
         </Box>
     </Container>
 }
