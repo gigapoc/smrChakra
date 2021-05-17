@@ -8,7 +8,7 @@ Docs & License: https://fullcalendar.io/
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var tslib = require('tslib');
-var common = require('@fullcalendar/common');
+var common = require('../common');
 
 // rename this file to options.ts like other packages?
 var OPTION_REFINERS = {

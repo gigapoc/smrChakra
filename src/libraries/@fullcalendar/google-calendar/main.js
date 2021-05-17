@@ -4,7 +4,7 @@ Docs & License: https://fullcalendar.io/
 (c) 2020 Adam Shaw
 */
 import { __assign } from 'tslib';
-import { identity, createPlugin, requestJson, addDays } from '@fullcalendar/common';
+import { identity, createPlugin, requestJson, addDays } from '../common';
 
 // rename this file to options.ts like other packages?
 var OPTION_REFINERS = {

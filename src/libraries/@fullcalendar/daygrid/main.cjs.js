@@ -7,7 +7,7 @@ Docs & License: https://fullcalendar.io/
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var common = require('@fullcalendar/common');
+var common = require('../common');
 var tslib = require('tslib');
 ;
 

@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var tslib = require('tslib');
 require('./vdom.cjs');
 var React = require('react');
-var common = require('@fullcalendar/common');
+var common = require('../../common');
 
 var FullCalendar = /** @class */ (function (_super) {
     tslib.__extends(FullCalendar, _super);

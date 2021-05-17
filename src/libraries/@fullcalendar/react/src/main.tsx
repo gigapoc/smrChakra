@@ -4,7 +4,7 @@ import {
   CalendarOptions,
   CalendarApi, CalendarDataProvider,
   CalendarContent, CalendarRoot
-} from '@fullcalendar/common'
+} from '../../common'
 
 
 export default class FullCalendar extends React.Component<CalendarOptions> {
@@ -41,4 +41,4 @@ export default class FullCalendar extends React.Component<CalendarOptions> {
 
 
 // export all important utils/types
-export * from '@fullcalendar/common'
+export * from '../../common'

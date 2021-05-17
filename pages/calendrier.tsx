@@ -1,8 +1,8 @@
 import { Box, Container } from "@chakra-ui/layout"
-import FullCalendar from 'src/libraries/@fullcalendar/react'
-import googleCalendarPlugin from 'src/libraries/@fullcalendar/google-calendar';
-import dayGridPlugin from 'src/libraries/@fullcalendar/daygrid';
-import frLocale from 'src/libraries/@fullcalendar/core/locales/fr';
+import FullCalendar from '../src/libraries/@fullcalendar/react'
+import googleCalendarPlugin from '../src/libraries/@fullcalendar/google-calendar';
+import dayGridPlugin from '../src/libraries/@fullcalendar/daygrid';
+import frLocale from '../src/libraries/@fullcalendar/core/locales/fr';
 
 
 interface Props {

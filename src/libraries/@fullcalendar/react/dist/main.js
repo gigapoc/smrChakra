@@ -1,7 +1,7 @@
 import { __assign, __extends } from "tslib";
 import './vdom';
 import * as React from 'react';
-import { CalendarApi, CalendarDataProvider, CalendarContent, CalendarRoot } from '@fullcalendar/common';
+import { CalendarApi, CalendarDataProvider, CalendarContent, CalendarRoot } from '../../common';
 var FullCalendar = /** @class */ (function (_super) {
     __extends(FullCalendar, _super);
     function FullCalendar() {
@@ -20,5 +20,5 @@ var FullCalendar = /** @class */ (function (_super) {
 }(React.Component));
 export default FullCalendar;
 // export all important utils/types
-export * from '@fullcalendar/common';
+export * from '../../common';
 //# sourceMappingURL=main.js.map

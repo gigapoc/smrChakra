@@ -11,6 +11,8 @@ import axios from "axios";
 const { connect } = require("../src/services/connect");
 import 'focus-visible/dist/focus-visible'
 import Head from "next/head"
+// import "@fullcalendar/common/main.min.css";
+// import "@fullcalendar/daygrid/main.min.css";
 
 interface AppProps {
   Component: React.ComponentClass;
