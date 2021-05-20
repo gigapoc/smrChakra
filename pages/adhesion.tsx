@@ -1,5 +1,6 @@
-import { Box, Container, Center, Text, Spacer } from "@chakra-ui/layout";
+import { Box, Container, Center, Text, Spacer, Flex, Link, HStack } from "@chakra-ui/layout";
 import { Title } from "@components/title";
+
 
 interface Props {
 
@@ -9,9 +10,9 @@ const AdhesionEnLigne: React.FC<Props> = ({}) => {
 
     return <Box bg="main.100" minH="calc(100vh - 100px)" color="main.200" id="adhesionPage">
         <Container maxW="container.xl" py={10}>
-            <iframe id="haWidget" scrolling="auto" src="https://www.helloasso.com/associations/senart-multirotor-racing/adhesions/adhesion-en-ligne-1/widget"/>
+            
 
-            <Box mt={20}>
+            <Box mb={40} >
                 <Center m={10}>
                     <Title fontSize="lg" w="20%">Adhésion en ligne</Title>
                 </Center>
@@ -22,11 +23,33 @@ const AdhesionEnLigne: React.FC<Props> = ({}) => {
                     <br/>
                     Ainsi, pour les nouveaux adhérents, les licences souscrites à partir de septembre sont valables dès leur souscription et ce jusqu’ au 31 décembre de l’année suivante. Pour les adhérents déjà licenciés, la licence peut être également souscrite dès septembre mais elle ne prend effet que le 1er janvier de l'année suivante.
                 </Text>
+                <Text px={10}>
+                    Pour le renouvellement de la licence, merci de remplir ce formulaire :
+                </Text>
+                <Flex flexDir="row" className="linkFiles" px={20}>
+                    <Link href={"https://assets.senart-multirotor-racing.com/PJ2-Questionnaire-QS-Sport.pdf"}>Renouvellement de la licence</Link>
+                </Flex>
+                
                 
                 <Text fontSize="lg" fontWeight="bold" mt={20}>Le certificat médical</Text>
                 <Text px={10}>
                     La première délivrance d’une licence sportive est subordonnée (Article L 231-2 du code du sport), à la production d’un certificat médical attestant l’absence de contre-indication à la pratique des activités physiques et sportives liées à l‘aéromodélisme. Le médecin de famille est parfaitement habilité à délivrer ce certificat médical que les nouveaux licenciés de la FFAM doivent fournir au moment de leur demande d'adhésion au club. Si cette exigence s'applique à la première délivrance d’une licence "pratiquant loisir ou compétition" elle ne s'applique pas aux licences "encadrement".
                 </Text>
+                <Text px={10}>
+                Le certificat médical doit mentionner spécifiquement l’absence de contre-indication de la pratique du sport ou de la discipline concernée en compétition, il est exigé tous les trois ans, c’est-à-dire lors d’un renouvellement de licence sur trois. Durant la période intermédiaire (2 ans), le licencié renseigne un questionnaire de santé : QS-Sport.
+                <br/>
+                Le QS-SPORT ne doit pas être remis à la fédération lors de la demande de renouvellement de la licence, il est confidentiel et doit être conservé par le licencié. Le sportif ou son représentant légal, doit toutefois attester auprès de la fédération avoir répondu par la négative à chacune des rubriques du QS-SPORT. L’attestation sera remplie et signée par le licencié et remise au club.
+                </Text>
+                <Text px={10}>
+                Le certificat médical devra être mis en ligne par le club ou le licencié lui-même sur la fiche licencié. La date du certificat médical, ainsi que les nom et prénom du médecin devront être renseignés.
+                </Text>
+                <Text px={10}>
+                    Le certificat médical est à télécharger ici :
+                </Text>
+                <HStack className="linkFiles" px={20} spacing="32px" >
+                    <Link href={"https://assets.senart-multirotor-racing.com/PJ1-Certificat-medical-aeromodelisme.doc"}>Certificat médical</Link>
+                    <Link href={"https://assets.senart-multirotor-racing.com/PJ3-Attestation-sante-licence-FFAM.doc"}>Certificat médical si renouvellement</Link>
+                </HStack>
 
                 <Text fontSize="lg" fontWeight="bold" mt={20}>L'assurance</Text>
                 <Text px={10}>
@@ -46,6 +69,8 @@ const AdhesionEnLigne: React.FC<Props> = ({}) => {
                     En fonction de votre âge et au-delà du droit d’entrée dans le club (en général inférieur à 100 €) et en fonction des infrastructures que le club va mettre à votre disposition, votre adhésion annuelle au club pourra varier, fonction de votre âge de 50 à moins de 150 €, licence fédérale incluse.
                 </Text>
             </Box>
+
+            <iframe id="haWidget" scrolling="auto" src="https://www.helloasso.com/associations/senart-multirotor-racing/adhesions/adhesion-en-ligne-1/widget"/>
         </Container>
 
     </Box>
