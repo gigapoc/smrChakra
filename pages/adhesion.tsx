@@ -9,7 +9,7 @@ const AdhesionEnLigne: React.FC<Props> = ({}) => {
 
     return <Box bg="main.100" minH="calc(100vh - 100px)" color="main.200" id="adhesionPage">
         <Container maxW="container.xl" py={10}>
-            <iframe id="haWidget" scrolling="auto" src="https://www.helloasso.com/associations/senart-multirotor-racing/adhesions/adhesion-en-ligne/widget"/>
+            <iframe id="haWidget" scrolling="auto" src="https://www.helloasso.com/associations/senart-multirotor-racing/adhesions/adhesion-en-ligne-1/widget"/>
 
             <Box mt={20}>
                 <Center m={10}>
