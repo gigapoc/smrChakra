@@ -3,6 +3,7 @@ import FullCalendar from '@fullcalendar/react'
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import frLocale from '@fullcalendar/core/locales/fr';
+import { NextSeo } from 'next-seo';
 
 
 interface Props {
@@ -11,7 +12,12 @@ interface Props {
 
 const Calendrier: React.FC<Props> = () => {
 
-    return <Box bg="main.100" minH="calc(100vh - 100px)">
+    return <>
+    <NextSeo
+      title="Calendrier SMR"
+      description="Toutes les dates clés du Sénart Multirotor Racing !"
+    />
+    <Box bg="main.100" minH="calc(100vh - 100px)">
         <Container maxW="container.xl" mt={10} color='#fff'>
             <FullCalendar 
                 plugins={[dayGridPlugin, googleCalendarPlugin]}
@@ -26,6 +32,7 @@ const Calendrier: React.FC<Props> = () => {
             />
         </Container>
     </Box>
+    </>
 }
 
 export default Calendrier;

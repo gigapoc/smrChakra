@@ -6,6 +6,7 @@ import { useState } from 'react';
 import BlogPreview from '@components/blogPreview';
 import Pagination from "@choc-ui/paginator";
 const { connect } = require("../src/services/connect");
+import { NextSeo } from 'next-seo';
 
 
 interface ImageFormat {
@@ -74,7 +75,12 @@ const Blog: React.FC<Props> = ({articles}) => {
 
     // let nbRows = ARTICLES_PER_PAGE / 2;
 
-    return <Box bg="main.100" minH="calc(100vh - 100px)" h="calc(100vh - 100px)">
+    return <>
+    <NextSeo
+      title="Blog SMR"
+      description="Bienvenue sur le blog du Sénart Multirotor Racing !"
+    />
+    <Box bg="main.100" minH="calc(100vh - 100px)" h="calc(100vh - 100px)">
         <Container h="100%" maxW="container.xl">
             <Flex h="90%" w="full">
                 <Flex flexGrow={8} w="full" flexDir="column">
@@ -111,6 +117,7 @@ const Blog: React.FC<Props> = ({articles}) => {
             
         </Container> */}
     </Box>
+    </>
 
 }
 

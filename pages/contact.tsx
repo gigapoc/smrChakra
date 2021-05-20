@@ -10,6 +10,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import Router from 'next/router'
 import {Logo} from '@components/logo'
+import { NextSeo } from 'next-seo';
 
 interface Props {
 
@@ -81,36 +82,42 @@ const Contact: React.FC<Props> = ({}) => {
     }
 
 
-    return <Box bg="main.100" minH="calc(100vh - 100px)" h="calc(100vh - 100px)">
-        <Container h="100%" maxW="container.md" p={20}>
-            <Text color="main.300" textAlign="center" fontWeight="bold" fontSize="2xl">Nous contacter</Text>
-            <VStack spacing={4} pt={10}>
-                <InputGroup>
-                    <InputLeftElement pointerEvents="none"><ImUser color="#fff"/></InputLeftElement>
-                    <Input type="string" placeholder="Nom *" color='#fff' _focus={{borderColor: "main.300"}} isInvalid={errorNom} onChange={handleChangeNom}/>
-                </InputGroup>
-                <InputGroup>
-                    <InputLeftElement pointerEvents="none"><IoMail color="#fff"/></InputLeftElement>
-                    <Input type="string" placeholder="Email *" color='#fff' _focus={{borderColor: "main.300"}} isInvalid={errorMail} onChange={handleChangeMail}/>
-                </InputGroup>
-                <InputGroup>
-                    <InputLeftElement pointerEvents="none"><IoMdText color="#fff"/></InputLeftElement>
-                    <Input type="string" placeholder="Objet *" color='#fff' _focus={{borderColor: "main.300"}} isInvalid={errorObjet} onChange={handleChangeObjet}/>
-                </InputGroup>
-                <InputGroup>
-                    <Textarea type="string" placeholder="Message *" color='#fff' resize="vertical" _focus={{borderColor: "main.300"}} rows={10} isInvalid={errorMessage} onChange={handleChangeMessage}/>
-                </InputGroup>
-                <Button variant="outline" color="main.200" borderColor="main.200" _hover={{color: 'main.100', bg:"main.300", 'borderColor': "main.300"}} onClick={handleValidate}>Envoyer</Button>
-            </VStack>
-        </Container>
-        <Popup open={displayPopup} closeOnDocumentClick onClose={() => window.location.href='/'}>
-            <VStack>
-                <Logo />
-                <Text py={10}> Merci pour votre message, nous vous répondrons au plus vite ! </Text>
-                <Button onClick={() => window.location.href='/'} marginBottom={20}>Retour à l'acceuil</Button>
-            </VStack>
-        </Popup>
-    </Box>
+    return <>
+        <NextSeo
+        title="Nous contacter"
+        description="Utilisez cette page pour nous contacter !"
+        />
+        <Box bg="main.100" minH="calc(100vh - 100px)" h="calc(100vh - 100px)">
+            <Container h="100%" maxW="container.md" p={20}>
+                <Text color="main.300" textAlign="center" fontWeight="bold" fontSize="2xl">Nous contacter</Text>
+                <VStack spacing={4} pt={10}>
+                    <InputGroup>
+                        <InputLeftElement pointerEvents="none"><ImUser color="#fff"/></InputLeftElement>
+                        <Input type="string" placeholder="Nom *" color='#fff' _focus={{borderColor: "main.300"}} isInvalid={errorNom} onChange={handleChangeNom}/>
+                    </InputGroup>
+                    <InputGroup>
+                        <InputLeftElement pointerEvents="none"><IoMail color="#fff"/></InputLeftElement>
+                        <Input type="string" placeholder="Email *" color='#fff' _focus={{borderColor: "main.300"}} isInvalid={errorMail} onChange={handleChangeMail}/>
+                    </InputGroup>
+                    <InputGroup>
+                        <InputLeftElement pointerEvents="none"><IoMdText color="#fff"/></InputLeftElement>
+                        <Input type="string" placeholder="Objet *" color='#fff' _focus={{borderColor: "main.300"}} isInvalid={errorObjet} onChange={handleChangeObjet}/>
+                    </InputGroup>
+                    <InputGroup>
+                        <Textarea type="string" placeholder="Message *" color='#fff' resize="vertical" _focus={{borderColor: "main.300"}} rows={10} isInvalid={errorMessage} onChange={handleChangeMessage}/>
+                    </InputGroup>
+                    <Button variant="outline" color="main.200" borderColor="main.200" _hover={{color: 'main.100', bg:"main.300", 'borderColor': "main.300"}} onClick={handleValidate}>Envoyer</Button>
+                </VStack>
+            </Container>
+            <Popup open={displayPopup} closeOnDocumentClick onClose={() => window.location.href='/'}>
+                <VStack>
+                    <Logo />
+                    <Text py={10}> Merci pour votre message, nous vous répondrons au plus vite ! </Text>
+                    <Button onClick={() => window.location.href='/'} marginBottom={20}>Retour à l'acceuil</Button>
+                </VStack>
+            </Popup>
+        </Box>
+    </>
 }
 
 export default Contact;
