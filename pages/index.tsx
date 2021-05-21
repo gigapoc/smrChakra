@@ -19,9 +19,9 @@ const Home: React.FC = () => {
       <Container maxW="container.xl">
         <EmbedVideo height="80vh"/>
         <DiscoverClub h="10vh" />
-        <TextePresentation h="40vh"/>
-        <Center marginBottom="10"><Separator w="70%"/></Center>
-        <LieuxDeVols h="100vh"/>
+        <TextePresentation />
+        {/* <Center marginBottom="10"><Separator w="70%"/></Center> */}
+        <LieuxDeVols/>
       </Container>
     </Flex>
   </>;

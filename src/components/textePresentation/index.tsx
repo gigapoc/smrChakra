@@ -3,13 +3,13 @@ import { Box, ListItem, Text, List, ListIcon } from '@chakra-ui/react';
 import React from 'react';
 
 interface Props {
-    h: string;
+    // h: string;
 }
 
-export const TextePresentation: React.FC<Props> = ({h}) => {
+export const TextePresentation: React.FC<Props> = ({}) => {
 
 
-    return <Box h={h} bg="main.100" color={"main.200"} py={10} px={20}>
+    return <Box bg="main.100" color={"main.200"} py={10} px={20}>
         <Text>
             Le SMR a été créé en février 2016 avec un objectif simple : <Text color='orange.100' display="inline" fontWeight="bold">promouvoir le pilotage en immersion de multirotors dédiés à la course (FPV Racing)</Text>.
         </Text>
