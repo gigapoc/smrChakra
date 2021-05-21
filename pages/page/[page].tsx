@@ -49,7 +49,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         console.log("E", e);
       });
 
-    const regex = /src=\"(.*?)\"/gm;
+    const regex = /src=\"([^http]*?)\"/gm;
     let contenu: string = pages[0].contenu
     contenu = contenu.replace(regex, (a,b) => a.replace(b, process.env.SERVER_URL + b))
     pages[0].contenu = contenu;
