@@ -21,7 +21,7 @@ export default function Page({page}: PageProps) {
     return <Container maxW="container.xl" bg="main.100">
       <Box id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh">
         {/* <h1 className={styles.h1}>{page.titre_menu}</h1> */}
-        <ReactMarkdownWithHtml children={page.contenu} renderers={renderers} allowDangerousHtml/>
+        <div dangerouslySetInnerHTML={{__html: page.contenu}} className="ck-content" />
       </Box>
     </Container>
 }
@@ -43,12 +43,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         console.log("E", e);
       });
 
-    const regex = /src=\"(.*)\"/gm;
+    const regex = /src=\"(.*?)\"/gm;
     let contenu: string = pages[0].contenu
     contenu = contenu.replace(regex, (a,b) => a.replace(b, process.env.SERVER_URL + b))
     pages[0].contenu = contenu;
-
-    console.log('contenu', contenu)
 
     return {
       props: {
