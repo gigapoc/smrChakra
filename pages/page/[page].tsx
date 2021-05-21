@@ -1,8 +1,8 @@
 import { GetServerSideProps } from 'next'
 import axios from 'axios';
 import { Center, Box, Container } from '@chakra-ui/layout';
-const ReactMarkdownWithHtml = require('react-markdown/with-html')
 const { connect } = require("../../src/services/connect");
+import { NextSeo } from 'next-seo';
 
 interface PageProps {
   page: {
@@ -18,12 +18,18 @@ export default function Page({page}: PageProps) {
       h1: ({value}) => <h1 className={"h1"}>{value}</h1>
     }
 
-    return <Container maxW="container.xl" bg="main.100">
-      <Box id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh">
-        {/* <h1 className={styles.h1}>{page.titre_menu}</h1> */}
-        <div dangerouslySetInnerHTML={{__html: page.contenu}} className="ck-content" />
-      </Box>
-    </Container>
+    return <>
+      <NextSeo
+      title={page.titre_menu}
+      description="Toutes les dates clés du Sénart Multirotor Racing !"
+      />
+      <Container maxW="container.xl" bg="main.100">
+        <Box id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh">
+          {/* <h1 className={styles.h1}>{page.titre_menu}</h1> */}
+          <div dangerouslySetInnerHTML={{__html: page.contenu}} className="ck-content" />
+        </Box>
+      </Container>
+    </>
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
