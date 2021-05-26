@@ -1,7 +1,7 @@
 import { Box, Container, Center, Text, Spacer, Flex, Link, HStack } from "@chakra-ui/layout";
 import { Title } from "@components/title";
 import { NextSeo } from 'next-seo';
-
+import {ChevronDownIcon, InfoIcon} from "@chakra-ui/icons"
 interface Props {
 
 }
@@ -21,6 +21,21 @@ const AdhesionEnLigne: React.FC<Props> = ({}) => {
                     <Center m={10}>
                         <Title fontSize="lg" w="20%">Adhésion en ligne</Title>
                     </Center>
+                    <Link href="#haWidget" colorScheme="yellow" _hover={{textDecor: "none"}}>
+                        <Center m={10} bg="rgba(200,200,200,.2)" p={5} rounded="2xl">
+                            <HStack>
+
+                                <Spacer />
+                                <Flex flexDir="column" >
+                                    
+                                    <Text color="main.300" fontSize="xl">Formulaire et tarifs en bas de page</Text>
+                                    <Center>
+                                        <ChevronDownIcon color="orange.100" className="bounce"/>
+                                    </Center>
+                                </Flex>
+                            </HStack>
+                        </Center>
+                    </Link>
                     <Text fontSize="lg" fontWeight="bold">Validité de la licence</Text>
                     <Text px={10}>
                         La licence est annuelle et elle est délivrée pour l'année civile. Toutefois, les licences peuvent commencer à être délivrées par les clubs à partir de mi septembre de l'année précédente.

@@ -11,7 +11,7 @@ export const LieuxDeVols: React.FC<Props> = ({}) => {
 
     return <Box bg="main.100" my={20} >
         <Center my="10">
-            <Title w="20vw" fontSize="1.5em">Nos lieux de vol en Essonne</Title>
+            <Title fontSize="1.5em">Nos lieux de vol en Essonne</Title>
         </Center>
         
         {/* <Box my="10" mx="20">
