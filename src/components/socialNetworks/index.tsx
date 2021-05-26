@@ -16,7 +16,7 @@ export const SocialNetworks: React.FC = () => {
                 <Link href="https://www.instagram.com/senartmultirotorracing/" target="_blank" style={iconStyle} >
                     <Image
                         src="/icons/instagram-icon.svg"
-                        alt="instagram"
+                        // alt="instagram"
                         width="28px"
                         height="29px"
                         className={"hoverIcon"}
@@ -29,7 +29,7 @@ export const SocialNetworks: React.FC = () => {
                 >
                     <Image
                     src="/icons/facebook-icon.svg"
-                    alt="facebook"
+                    // alt="facebook"
                     width="15px"
                     height="28px"
                     />
@@ -41,7 +41,7 @@ export const SocialNetworks: React.FC = () => {
                 >
                     <Image
                     src="/icons/youtube-icon.svg"
-                    alt="youtube"
+                    // alt="youtube"
                     width="31px"
                     height="32px"
                     />
@@ -53,7 +53,7 @@ export const SocialNetworks: React.FC = () => {
                 >
                     <Image
                     src="/icons/discord-icon.svg"
-                    alt="discord"
+                    // alt="discord"
                     width="35px"
                     height="35px"
                     />
@@ -68,7 +68,7 @@ export const SocialNetworks: React.FC = () => {
                 >
                     <Image
                     src="/icons/thingiverse.png"
-                    alt="thingiverse"
+                    // alt="thingiverse"
                     width="35px"
                     height="35px"
                     />
