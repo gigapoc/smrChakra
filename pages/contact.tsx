@@ -88,7 +88,7 @@ const Contact: React.FC<Props> = ({}) => {
         description="Utilisez cette page pour nous contacter !"
         />
         <Box bg="main.100" minH="calc(100vh - 100px)" h="calc(100vh - 100px)">
-            <Container h="100%" maxW="container.md" p={20}>
+            <Container h="100%" maxW="container.md" p={{md: 20, sm: 5}}>
                 <Text color="main.300" textAlign="center" fontWeight="bold" fontSize="2xl">Nous contacter</Text>
                 <VStack spacing={4} pt={10}>
                     <InputGroup>

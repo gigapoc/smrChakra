@@ -16,7 +16,7 @@ const Partenaires: React.FC<Props> = () => {
             <Container maxW="container.xl">
             <Center py="7%" flexDirection="column">
                 <Text color="main.200" pb="10">Merci à tous nos partenaires</Text>
-                <Grid templateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4,1fr)"]} 
+                <Grid templateColumns={{sm: "repeat(2, 1fr)", md: "repeat(3, 1fr)", lg: "repeat(4,1fr)"}} 
                         gap={20}
                         h="70%"
                         >
@@ -81,6 +81,7 @@ const Partenaires: React.FC<Props> = () => {
             </Container>
             
         </Box>
+        <Box display={{sm: "block", md: 'none'}} h={"70px"}/>
     </>
 }
 
