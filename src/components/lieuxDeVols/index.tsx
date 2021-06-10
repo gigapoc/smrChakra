@@ -19,30 +19,31 @@ export const LieuxDeVols: React.FC<Props> = ({}) => {
         </Box> */}
         
         <VStack align="stretch" spacing="70px">
-        <Flex justify="space-around" height="30vh">
+            <Flex justify="space-around" height="30vh" flexDir={{sm: 'column', md: "row"}}>
                 <Center flex="5" >
                     <Image 
                         src="/images/terrainCorbeil.jpg"
-                        width="calc(50%)"
+                        width={{md: "calc(50%)", sm: '100%'}}
                         objectFit="cover"
                 />
                 </Center>
-                <Center flex="1"><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
+                <Center flex="1" display={{sm: "none", md: "block"}}><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
                 <Center flex="5"><Text color="#fff" >Stade Robinson, Corbeil-Essonnes</Text></Center>
                 
             </Flex>
-            <Flex justify="space-around" height="30vh">
+            <Flex justify="space-around" height="30vh" flexDir={{sm: 'column-reverse', md: "row"}}>
                 <Center flex="5"><Text color="#fff" >Ancienne base aérienne 217, Brétigny-sur-orge</Text></Center>
-                <Center flex="1"><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
+                <Center flex="1" display={{sm: "none", md: "block"}}><Box  marginTop="-5"><Separator w="9vw"/></Box></Center>
                 <Center flex="5" >
                     <Image 
                         src="/images/entreeClubSmr.png"
-                        width="calc(50%)"
+                        width={{md: "calc(50%)", sm: '100%'}}
                         objectFit="cover"
                     />
                 </Center>
             </Flex>
             
         </VStack>
+        <Box display={{sm: 'block', md: "none"}} h="60px"/>
     </Box>
 }

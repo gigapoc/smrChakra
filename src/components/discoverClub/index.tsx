@@ -7,8 +7,8 @@ interface Props {
 }
 
 export const DiscoverClub: React.FC<Props> = ({h}) => {
-    return <Flex direction="column" bg="main.100" color="main.200" h={h}>
-            <Center paddingTop="5">
+    return <Flex direction="column" bg="main.100" color="main.200" h={h} display={{sm: "none", md: "block"}}>
+            <Center paddingTop="5" >
                 <Text textAlign="center" color="orange.100">Découvrir le club</Text>
             </Center>
             <Center>

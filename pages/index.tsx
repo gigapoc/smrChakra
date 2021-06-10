@@ -17,7 +17,7 @@ const Home: React.FC = () => {
     />
     <Flex direction="column" minH={{md: "calc(100%-100px)", sm: "calc(100%-50px)"}} bg="main.100">
       <Container maxW="container.xl">
-        <EmbedVideo height="80vh"/>
+        <EmbedVideo height={{md: "80vh", sm: ""}}/>
         <DiscoverClub h="10vh" />
         <TextePresentation />
         {/* <Center marginBottom="10"><Separator w="70%"/></Center> */}

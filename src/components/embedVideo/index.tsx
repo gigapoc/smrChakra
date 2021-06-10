@@ -1,8 +1,8 @@
-import { AspectRatio, Box } from '@chakra-ui/react'
+import { AspectRatio, Box, ResponsiveValue } from '@chakra-ui/react'
 import React from 'react'
 
 interface Props {
-    height: string;
+    height: string | ResponsiveValue<any>;
 }
 
 export const EmbedVideo: React.FC<Props> = ({height}) => {
