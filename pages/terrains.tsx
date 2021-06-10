@@ -17,7 +17,7 @@ const Terrains: React.FC<Props> = ({}) => {
         />
         <Box bg="main.100" minH="calc(100vh - 100px)" color="main.200">
             <Container maxW="container.xl">
-                <Center m='auto' my={10} p={2} pt={5} border="2px solid orange" borderRadius="2xl" textAlign="center" flexDirection="column" w="50%" >
+                <Center m='auto' my={10} p={2} pt={5} border="2px solid orange" borderRadius="2xl" textAlign="center" flexDirection="column" w={{md:"50%", sm: "100%"}} >
                     <WarningTwoIcon w="30px" h="30px" color='main.300' mb={5}/>
                     <Text fontSize="md" fontWeight="bold">
                         L'accès aux terrains est strictement réservé aux membres du club.
@@ -29,8 +29,8 @@ const Terrains: React.FC<Props> = ({}) => {
                     
                     <Box w="100%">
                         <Center><Title fontSize="2xl">Corbeil-Essonnes</Title></Center>
-                        <Flex flexDirection="row" mx={10} mt={10}>
-                            <Box flexGrow={1} w="50%">
+                        <Flex flexDirection={{md:"row", sm: "column"}} mx={{md: 10, sm: 0}} mt={10}>
+                            <Box flexGrow={1} w={{md:"50%", sm: "100%"}}>
                                 {/* <Image 
                                     src="/images/entreeClubSmr.png"
                                     w="450px"
@@ -41,8 +41,8 @@ const Terrains: React.FC<Props> = ({}) => {
                                     </div>
                                 </div>
                             </Box>
-                            <Box flexGrow={1} ml={10} my='auto' w="50%">
-                                <Text textAlign="left" >
+                            <Box flexGrow={1} ml={{md: 10, sm: 0}} mt={{sm: 4, md: 0}} my='auto' w={{md:"50%", sm: "100%"}}>
+                                <Text textAlign={{md: "left", sm:"center"}} >
 
                                     Stade Robinson
                                     <br/>
@@ -62,10 +62,10 @@ const Terrains: React.FC<Props> = ({}) => {
                     </Box>
 
                     <Box w="100%">
-                        <Center><Title fontSize="2xl">Brétigny-sur-Orge (terrain secondaire)</Title></Center>
-                        <Flex flexDirection="row" mx={10} mt={10}>
-                            <Box flexGrow={1} mr={10} my='auto' w="50%">
-                                <Text textAlign="right" >
+                        <Center textAlign={{sm: 'center', md: "left"}}><Title fontSize="2xl" >Brétigny-sur-Orge (terrain secondaire)</Title></Center>
+                        <Flex flexDirection={{md:"row", sm: "column-reverse"}} mx={{md: 10, sm: 0}} mt={10}>
+                            <Box flexGrow={1} mr={10} mt={{sm: 4, md: 0}} my='auto' w={{md:"50%", sm: "100%"}}>
+                                <Text textAlign={{md: "right", sm:"center"}} >
 
                                     Base Aérienne 217
                                     <br/>
@@ -81,7 +81,7 @@ const Terrains: React.FC<Props> = ({}) => {
 
                                 </Text>
                             </Box>
-                            <Box flexGrow={1} w="50%">
+                            <Box flexGrow={1} w={{md:"50%", sm: "100%"}}>
                                 {/* <Image 
                                     src="/images/entreeClubSmr.png"
                                     w="450px"
