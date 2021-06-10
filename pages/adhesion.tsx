@@ -19,7 +19,7 @@ const AdhesionEnLigne: React.FC<Props> = ({}) => {
 
                 <Box mb={40} >
                     <Center m={10}>
-                        <Title fontSize="lg" w="20%">Adhésion en ligne</Title>
+                        <Title fontSize="lg">Adhésion en ligne</Title>
                     </Center>
                     <Link href="#haWidget" colorScheme="yellow" _hover={{textDecor: "none"}}>
                         <Center m={10} bg="rgba(200,200,200,.2)" p={5} rounded="2xl">
