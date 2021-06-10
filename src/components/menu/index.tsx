@@ -110,12 +110,11 @@ export const Menu: React.FC<any> = ({pagesActivites}: MenuProps) => {
     ]
 
     return <Center color="main.200" h="100%">
-        <Stack direction="row" spacing={20}>
+        <Stack direction="row" spacing={{md: 20, sm: 5}} fontSize={{sm: "16px", md: "18px"}}>
 
             <PopoverMenu menuName="ACTIVITÉS" links={linksActi}/>
             <PopoverMenu menuName= "CLUB" links={linksClub}/>
             <MenuLink href={'/blog'} bold={true}>BLOG</MenuLink>
-
         </Stack>
     </Center>
 

@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       title="SMR"
       description="Bienvenue sur le site du Sénart Multirotor Racing !"
     />
-    <Flex direction="column" minH="calc(100%-100px)" bg="main.100">
+    <Flex direction="column" minH={{md: "calc(100%-100px)", sm: "calc(100%-50px)"}} bg="main.100">
       <Container maxW="container.xl">
         <EmbedVideo height="80vh"/>
         <DiscoverClub h="10vh" />
