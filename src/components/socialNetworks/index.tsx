@@ -1,4 +1,4 @@
-import { Center, Flex, Image, Link } from "@chakra-ui/react";
+import { Center, Flex, HStack, Image, Link } from "@chakra-ui/react";
 import React from "react";
 
 export const SocialNetworks: React.FC = () => {
@@ -12,7 +12,7 @@ export const SocialNetworks: React.FC = () => {
 
     return (
         <Center bg="main.100" h="100%">
-            <Flex >
+            <HStack >
                 <Link href="https://www.instagram.com/senartmultirotorracing/" target="_blank" style={iconStyle} >
                     <Image
                         src="/icons/instagram-icon.svg"
@@ -73,7 +73,7 @@ export const SocialNetworks: React.FC = () => {
                     height="35px"
                     />
                 </a>
-            </Flex>
+            </HStack>
         </Center>
     )
 
