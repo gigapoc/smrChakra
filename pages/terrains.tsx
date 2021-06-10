@@ -28,7 +28,7 @@ const Terrains: React.FC<Props> = ({}) => {
                 <VStack spacing="90px" mb={40}>
                     
                     <Box w="100%">
-                        <Center><Title w="50%" fontSize="2xl">Corbeil-Essonnes</Title></Center>
+                        <Center><Title fontSize="2xl">Corbeil-Essonnes</Title></Center>
                         <Flex flexDirection="row" mx={10} mt={10}>
                             <Box flexGrow={1} w="50%">
                                 {/* <Image 
@@ -62,7 +62,7 @@ const Terrains: React.FC<Props> = ({}) => {
                     </Box>
 
                     <Box w="100%">
-                        <Center><Title w="60%" fontSize="2xl">Brétigny-sur-Orge (terrain secondaire)</Title></Center>
+                        <Center><Title fontSize="2xl">Brétigny-sur-Orge (terrain secondaire)</Title></Center>
                         <Flex flexDirection="row" mx={10} mt={10}>
                             <Box flexGrow={1} mr={10} my='auto' w="50%">
                                 <Text textAlign="right" >
