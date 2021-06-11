@@ -38,7 +38,7 @@ export const Header: React.FC<any> = ({pages}: HeaderProps) => {
         <Box flex={5} height="2px" bg="orange.100" display={{sm: "none", md:"block"}}/>
         <Spacer flex={0.5}/>
       </Flex>
-      <Box display={{sm: "block", md:"none"}} pos="absolute" w="100%" top={"calc(100vh - 69px)"} bg={"main.100"} h={"70px"} borderTop={"1px solid orange"}>
+      <Box display={{sm: "block", md:"none"}} pos="absolute" w="100%" top={"calc(100vh - 49px)"} bg={"main.100"} h={"50px"} borderTop={"1px solid orange"}>
         <SocialNetworks/>
       </Box>
     </Box>
