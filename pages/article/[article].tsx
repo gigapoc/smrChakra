@@ -21,8 +21,9 @@ export default function BlogArticle({article}: ArticleProps) {
     }
 
     return <Container maxW="container.xl">
-        <Box mt={5} position="relative" left="-10%">
-          <Button variant="ghost" color="main.200" fontWeight="medium" _hover={{color: "main.100", bg: "main.200"}} onClick={() => window.location.href="/blog"}><ArrowBackIcon /> Revenir à tous les articles</Button>
+        <Box mt={5} position="relative" left={{md: "-10%", sm: '0'}}>
+          <Button display={{sm: "block", md: "none"}} variant="outline" color="main.200" fontWeight="medium" _hover={{color: "main.100", bg: "main.200"}} onClick={() => window.location.href="/blog"}><ArrowBackIcon /> Revenir à tous les articles</Button>
+          <Button display={{sm: "none", md: "block"}} variant="ghost" color="main.200" fontWeight="medium" _hover={{color: "main.100", bg: "main.200"}} onClick={() => window.location.href="/blog"}><ArrowBackIcon /> Revenir à tous les articles</Button>
         </Box>
         <Center><Text color="main.300" fontWeight="bold" pt="20" fontSize="2xl">{article.title}</Text></Center>
         <Box id="content" bg="main.100" color="main.200" flexDirection="column" pt="20" minH="100vh" >
@@ -30,6 +31,7 @@ export default function BlogArticle({article}: ArticleProps) {
             {/* <ReactMarkdownWithHtml children={article.texte} allowDangerousHtml/> */}
             <div dangerouslySetInnerHTML={{__html: article.texte}} className="ck-content" />
         </Box>
+        <Box display={{sm: "block", md: "none"}} h='70px'/>
     </Container>
 }
 
