@@ -2,7 +2,7 @@ import {Box, Container, Flex, Grid, GridItem} from '@chakra-ui/react'
 import { GetServerSideProps } from 'next';
 import Archives from '@components/blogArchives'
 import axios from "axios";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BlogPreview from '@components/blogPreview';
 import Pagination from "@choc-ui/paginator";
 const { connect } = require("../src/services/connect");
@@ -42,9 +42,17 @@ interface Props {
     articles: Article[];
 }
 
-const ARTICLES_PER_PAGE = 4;
 
 const Blog: React.FC<Props> = ({articles}) => {
+
+    let [article_per_page, set_article_per_page] = useState(4);
+
+    useEffect(() => {
+        if (window.innerWidth < 450)
+            set_article_per_page(2);
+        else 
+            set_article_per_page(4);
+    }, [])
 
     function paginate(array, page_size, page_number) {
         // human-readable page numbers usually start with 1, so we reduce 1 in the first argument
@@ -53,7 +61,7 @@ const Blog: React.FC<Props> = ({articles}) => {
 
     let [page, setPage] = useState(1);
 
-    let [arts, setArts] = useState(paginate(articles.sort((a, b) => {if (new Date(a.dateArticle).getTime() > new Date(b.dateArticle).getTime()) return -1; return 1}), ARTICLES_PER_PAGE, page));
+    let [arts, setArts] = useState(paginate(articles.sort((a, b) => {if (new Date(a.dateArticle).getTime() > new Date(b.dateArticle).getTime()) return -1; return 1}), article_per_page, page));
     let [isArtsFiltered, setIsArtsFiltered] = useState(false)
     
     let callbackFilterMonth = (date: string) => {
@@ -85,14 +93,14 @@ const Blog: React.FC<Props> = ({articles}) => {
             <Flex h="90%" w="full">
                 <Flex flexGrow={8} w="full" flexDir="column">
                     <Grid templateRows={"repeat(2, 1fr)"}
-                            templateColumns="repeat(2, 1fr)"
+                            templateColumns={{md: "repeat(2, 1fr)", sm: 'repeat(1, 1fr)'}}
                             // h="100%"
                             gap={6}
                             p={6}
                             py={30}
                             flexGrow={8}
                             >
-                        {paginate(arts, ARTICLES_PER_PAGE, page).map(a => (
+                        {paginate(arts, article_per_page, page).map(a => (
                             <GridItem><BlogPreview article={a}/></GridItem>
                         ))}
                     </Grid>
@@ -102,13 +110,13 @@ const Blog: React.FC<Props> = ({articles}) => {
                             defaultCurrent={1}
                             colorScheme="yellow"
                             current={page}
-                            total={((isArtsFiltered ? arts.length : articles.length) / ARTICLES_PER_PAGE) * 10}
+                            total={((isArtsFiltered ? arts.length : articles.length) / article_per_page) * 10}
                             onChange={(page) => {setPage(page); setArts(articles.sort((a, b) => {if (new Date(a.dateArticle).getTime() > new Date(b.dateArticle).getTime()) return -1; return 1}))}}
                         />
                     </Flex>
                     
                 </Flex>
-                <Box flexGrow={2}>
+                <Box flexGrow={2} display={{sm: "none", md: "block"}}>
                     <Archives dates={articles.map(a => a.dateArticle)} callbackFilterMonth={callbackFilterMonth} resetFilter={unfilterArts} isFiltered={isArtsFiltered} />
                 </Box>
             </Flex>
