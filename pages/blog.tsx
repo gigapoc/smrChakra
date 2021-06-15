@@ -90,7 +90,7 @@ const Blog: React.FC<Props> = ({articles}) => {
     />
     <Box bg="main.100" minH="calc(100vh - 100px)" h="calc(100vh - 100px)">
         <Container h="100%" maxW="container.xl">
-            <Flex h="90%" w="full">
+            <Flex h="100vh" w="full">
                 <Flex flexGrow={8} w="full" flexDir="column">
                     <Grid templateRows={"repeat(2, 1fr)"}
                             templateColumns={{md: "repeat(2, 1fr)", sm: 'repeat(1, 1fr)'}}
