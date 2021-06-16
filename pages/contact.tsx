@@ -117,7 +117,7 @@ const Contact: React.FC<Props> = ({}) => {
                 </VStack>
             </Popup>
         </Box>
-        <Box display={{sm: 'block', md: "none"}} h="100px"/>
+        <Box display={{sm: 'block', md: "none"}} h="150px"/>
     </>
 }
 
