@@ -89,7 +89,7 @@ export const Menu: React.FC<any> = ({pagesActivites}: MenuProps) => {
         },
         {
             href: "/terrains",
-            label: "Accès aux terrains"
+            label: "Accès au terrain"
         },
         {
             href: '/chronologie',

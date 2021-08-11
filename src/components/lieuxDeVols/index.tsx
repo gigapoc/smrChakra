@@ -10,8 +10,8 @@ interface Props {
 export const LieuxDeVols: React.FC<Props> = ({}) => {
 
     return <Box bg="main.100" my={20} >
-        <Center my="10">
-            <Title fontSize="1.5em">Nos lieux de vol en Essonne</Title>
+        <Center my="20">
+            <Title fontSize="1.5em">Notre lieu de vol en Essonne</Title>
         </Center>
         
         {/* <Box my="10" mx="20">
@@ -19,21 +19,22 @@ export const LieuxDeVols: React.FC<Props> = ({}) => {
         </Box> */}
         
         <VStack align="stretch" spacing="70px">
-            <Flex justify="space-around"  flexDir={{sm: 'column', md: "row"}}>
+            <Flex justify="space-around"  flexDir={{sm: 'column', md: "column"}}>
+                <Center flex="5"><Text color="#fff" >Stade Robinson, Corbeil-Essonnes</Text></Center>
                 <Center flex="5" >
                     <Image 
                         src="/images/terrainCorbeil.jpg"
-                        width={{md: "calc(50%)", sm: '100%'}}
+                        width={{md: "calc(70%)", sm: '100%'}}
                         objectFit="cover"
                 />
                 </Center>
                 {/* <Center flex="1" display={{sm: "none", md: "block"}}><Box  marginTop="-5"><Separator w="9vw"/></Box></Center> */}
-                <Center flex="5"><Text color="#fff" >Stade Robinson, Corbeil-Essonnes</Text></Center>
+                
                 
             </Flex>
-            <Flex justify="space-around"  flexDir={{sm: 'column-reverse', md: "row"}} >
+            {/* <Flex justify="space-around"  flexDir={{sm: 'column-reverse', md: "row"}} >
                 <Center flex="5"><Text color="#fff" >Ancienne base aérienne 217, Brétigny-sur-orge</Text></Center>
-                {/* <Center flex="1" display={{sm: "none", md: "block"}}><Box  marginTop="-5"><Separator w="9vw"/></Box></Center> */}
+                
                 <Center flex="5" >
                     <Image 
                         src="/images/entreeClubSmr.png"
@@ -41,7 +42,7 @@ export const LieuxDeVols: React.FC<Props> = ({}) => {
                         objectFit="cover"
                     />
                 </Center>
-            </Flex>
+            </Flex> */}
             
         </VStack>
         <Box display={{sm: 'block', md: "none"}} h="60px"/>
