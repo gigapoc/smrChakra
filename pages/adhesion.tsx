@@ -90,7 +90,7 @@ const AdhesionEnLigne: React.FC<Props> = ({}) => {
                     </Text>
                 </Box>
 
-                <iframe id="haWidget" scrolling="auto" src="https://www.helloasso.com/associations/senart-multirotor-racing/adhesions/adhesion-en-ligne-1/widget"/>
+                <iframe id="haWidget" scrolling="auto" src="https://www.helloasso.com/associations/senart-multirotor-racing/adhesions/adhesion-en-ligne-2022/widget"/>
             </Container>
 
         </Box>
