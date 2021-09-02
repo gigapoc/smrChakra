@@ -2,12 +2,16 @@ import { Box, Container, Center, Text, Spacer, Flex, Link, HStack } from "@chakr
 import { Title } from "@components/title";
 import { NextSeo } from 'next-seo';
 import {ChevronDownIcon, InfoIcon} from "@chakra-ui/icons"
-interface Props {
+import { GetServerSideProps } from "next";
+const { connect } = require("../src/services/connect");
+import axios from "axios";
 
+
+interface Props {
+    lien: string;
 }
 
-const AdhesionEnLigne: React.FC<Props> = ({}) => {
-
+const AdhesionEnLigne: React.FC<Props> = ({lien}) => {
     return <>
         <NextSeo
         title="Adhésion SMR"
@@ -90,11 +94,33 @@ const AdhesionEnLigne: React.FC<Props> = ({}) => {
                     </Text>
                 </Box>
 
-                <iframe id="haWidget" scrolling="auto" src="https://www.helloasso.com/associations/senart-multirotor-racing/adhesions/adhesion-en-ligne-2022/widget"/>
+                <iframe id="haWidget" scrolling="auto" src={lien}/>
             </Container>
 
         </Box>
     </>
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    //Connect
+    const jwt = await connect();
+    let lien = await axios
+      .get(process.env.SERVER_URL + "/liens/1", {
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+        },
+      })
+      .then((value) => {
+        return value.data;
+      })
+      .catch((e) => {
+        console.log("E", e);
+      });
+    return {
+        props: {
+            lien: lien.lien
+        }
+    }
 }
 
 export default AdhesionEnLigne;
