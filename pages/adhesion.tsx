@@ -54,11 +54,11 @@ const AdhesionEnLigne: React.FC<Props> = ({lien}) => {
                     <VStack  className="linkFiles" px={20}>
                         <Flex >
                             <Text mr={10}>Pour les mineurs :</Text>
-                            <Link href={"https://assets.senart-multirotor-racing.com/Questionnaire-sante-mineur-2023.pdf"}>Questionnaire personne mineure</Link>
+                            <Link target="_blank" href={"https://assets.senart-multirotor-racing.com/Questionnaire-sante-mineur-2023.pdf"}>Questionnaire personne mineure</Link>
                         </Flex>
                         <Flex>
                             <Text mr={10}>Pour les majeurs :</Text>
-                            <Link href={"https://assets.senart-multirotor-racing.com/Questionnaire-sante-majeur-2023.pdf"}>Questionnaire personne majeure</Link>
+                            <Link target="_blank" href={"https://assets.senart-multirotor-racing.com/Questionnaire-sante-majeur-2023.pdf"}>Questionnaire personne majeure</Link>
                         </Flex>
                     </VStack>
                     {/* <Flex flexDir="row" className="linkFiles" px={20}>
@@ -83,8 +83,8 @@ const AdhesionEnLigne: React.FC<Props> = ({lien}) => {
                         Le certificat médical est à télécharger ici :
                     </Text>
                     <HStack className="linkFiles" px={20} spacing="32px" >
-                        <Link href={"https://assets.senart-multirotor-racing.com/PJ1-Certificat-medical-aeromodelisme.doc"}>Certificat médical</Link>
-                        <Link href={"https://assets.senart-multirotor-racing.com/PJ3-Attestation-sante-licence-FFAM.doc"}>Certificat médical si renouvellement</Link>
+                        <Link target="_blank" href={"https://assets.senart-multirotor-racing.com/PJ1-Certificat-medical-aeromodelisme.doc"}>Certificat médical</Link>
+                        <Link target="_blank" href={"https://assets.senart-multirotor-racing.com/PJ3-Attestation-sante-licence-FFAM.doc"}>Certificat médical si renouvellement</Link>
                     </HStack>
 
                     <Text fontSize="lg" fontWeight="bold" mt={20}>L'assurance</Text>
