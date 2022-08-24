@@ -1,4 +1,4 @@
-import { Box, Container, Center, Text, Spacer, Flex, Link, HStack } from "@chakra-ui/layout";
+import { Box, Container, Center, Text, Spacer, Flex, Link, HStack, VStack } from "@chakra-ui/layout";
 import { Title } from "@components/title";
 import { NextSeo } from 'next-seo';
 import {ChevronDownIcon, InfoIcon} from "@chakra-ui/icons"
@@ -48,12 +48,24 @@ const AdhesionEnLigne: React.FC<Props> = ({lien}) => {
                         Ainsi, pour les nouveaux adhérents, les licences souscrites à partir de septembre sont valables dès leur souscription et ce jusqu’ au 31 décembre de l’année suivante. Pour les adhérents déjà licenciés, la licence peut être également souscrite dès septembre mais elle ne prend effet que le 1er janvier de l'année suivante.
                     </Text>
                     <Text px={10}>
-                        Pour le renouvellement de la licence, merci de remplir ce formulaire :
+                        Pour le renouvellement de la licence, merci de remplir ce questionnaire :
                     </Text>
-                    <Flex flexDir="row" className="linkFiles" px={20}>
+
+                    <VStack  className="linkFiles" px={20}>
+                        <Flex >
+                            <Text mr={10}>Pour les mineurs :</Text>
+                            <Link href={"https://assets.senart-multirotor-racing.com/Questionnaire-sante-mineur-2023.pdf"}>Questionnaire personne mineure</Link>
+                        </Flex>
+                        <Flex>
+                            <Text mr={10}>Pour les majeurs :</Text>
+                            <Link href={"https://assets.senart-multirotor-racing.com/Questionnaire-sante-majeur-2023.pdf"}>Questionnaire personne majeure</Link>
+                        </Flex>
+                    </VStack>
+                    {/* <Flex flexDir="row" className="linkFiles" px={20}>
+                        
                         <Link href={"https://assets.senart-multirotor-racing.com/PJ2-Questionnaire-QS-Sport.pdf"}>Renouvellement de la licence</Link>
                     </Flex>
-                    
+                     */}
                     
                     <Text fontSize="lg" fontWeight="bold" mt={20}>Le certificat médical</Text>
                     <Text px={10}>
